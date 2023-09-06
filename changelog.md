@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.4.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v1.3.0...v1.4.0)
+
+### 🚀 Features
+
+- Update eslint-plugin-perfectionist ([8638ec2](https://github.com/azat-io/eslint-config/commit/8638ec2))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.3.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v1.2.1...v1.3.0)
