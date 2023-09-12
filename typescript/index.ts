@@ -77,75 +77,9 @@ export default defineFlatConfig([
         },
       ],
       '@typescript-eslint/no-useless-constructor': 'error',
-      '@typescript-eslint/padding-line-between-statements': [
-        'error',
-        {
-          blankLine: 'always',
-          prev: '*',
-          next: ['multiline-const', 'multiline-let', 'multiline-expression'],
-        },
-        {
-          blankLine: 'always',
-          prev: ['multiline-const', 'multiline-let', 'multiline-expression'],
-          next: '*',
-        },
-        {
-          blankLine: 'always',
-          prev: '*',
-          next: 'block',
-        },
-        {
-          blankLine: 'always',
-          prev: 'block',
-          next: '*',
-        },
-        {
-          blankLine: 'always',
-          prev: '*',
-          next: 'block-like',
-        },
-        {
-          blankLine: 'always',
-          prev: 'block-like',
-          next: '*',
-        },
-        {
-          blankLine: 'any',
-          prev: '*',
-          next: 'return',
-        },
-        {
-          blankLine: 'always',
-          prev: '*',
-          next: ['interface', 'type'],
-        },
-      ],
       '@typescript-eslint/block-spacing': ['error', 'always'],
-      '@typescript-eslint/brace-style': [
-        'error',
-        '1tbs',
-        {
-          allowSingleLine: true,
-        },
-      ],
       '@typescript-eslint/func-call-spacing': ['error', 'never'],
-      '@typescript-eslint/key-spacing': [
-        'error',
-        {
-          beforeColon: false,
-          afterColon: true,
-        },
-      ],
-      '@typescript-eslint/lines-between-class-members': [
-        'error',
-        'always',
-        {
-          exceptAfterSingleLine: true,
-        },
-      ],
       '@typescript-eslint/no-extra-parens': ['error', 'functions'],
-      '@typescript-eslint/object-curly-spacing': ['error', 'always'],
-      '@typescript-eslint/space-infix-ops': 'error',
 
       'dot-notation': 'off',
       'no-array-constructor': 'off',
@@ -158,15 +92,9 @@ export default defineFlatConfig([
       'no-use-before-define': 'off',
       'no-useless-constructor': 'off',
       'block-spacing': 'off',
-      'brace-style': 'off',
       'func-call-spacing': 'off',
-      'key-spacing': 'off',
-      'lines-between-class-members': 'off',
       'no-extra-parens': 'off',
       'no-undef': 'off',
-      'object-curly-spacing': 'off',
-      'padding-line-between-statements': 'off',
-      'space-infix-ops': 'off',
 
       'import/no-unresolved': 'error',
     },

@@ -37,7 +37,6 @@ export default defineFlatConfig([
     },
 
     rules: {
-      'array-bracket-spacing': ['error', 'never'],
       'array-callback-return': [
         'error',
         {
@@ -46,34 +45,11 @@ export default defineFlatConfig([
         },
       ],
       'arrow-body-style': ['error', 'as-needed'],
-      'arrow-spacing': [
-        'error',
-        {
-          before: true,
-          after: true,
-        },
-      ],
-      'block-spacing': ['error', 'always'],
-      'brace-style': [
-        'error',
-        '1tbs',
-        {
-          allowSingleLine: true,
-        },
-      ],
       camelcase: [
         'error',
         {
           properties: 'always',
           ignoreGlobals: true,
-        },
-      ],
-      'comma-style': ['error', 'last'],
-      'computed-property-spacing': [
-        'error',
-        'never',
-        {
-          enforceForClassMembers: true,
         },
       ],
       'consistent-return': 'error',
@@ -87,26 +63,6 @@ export default defineFlatConfig([
         },
       ],
       eqeqeq: 'error',
-      'func-call-spacing': ['error', 'never'],
-      'generator-star-spacing': [
-        'error',
-        {
-          before: true,
-          after: true,
-        },
-      ],
-      'key-spacing': [
-        'error',
-        {
-          beforeColon: false,
-          afterColon: true,
-        },
-      ],
-      'lines-between-class-members': [
-        'error',
-        'always',
-        { exceptAfterSingleLine: true },
-      ],
       'new-cap': [
         'error',
         {
@@ -191,14 +147,6 @@ export default defineFlatConfig([
         },
       ],
       'no-multi-str': 'error',
-      'no-multiple-empty-lines': [
-        'error',
-        {
-          max: 1,
-          maxBOF: 0,
-          maxEOF: 0,
-        },
-      ],
       'no-nested-ternary': 'error',
       'no-new': 'error',
       'no-new-func': 'error',
@@ -221,7 +169,6 @@ export default defineFlatConfig([
       'no-shadow': 'error',
       'no-shadow-restricted-names': 'error',
       'no-sparse-arrays': 'error',
-      'no-tabs': 'error',
       'no-template-curly-in-string': 'error',
       'no-undef': 'error',
       'no-undef-init': 'error',
@@ -272,75 +219,11 @@ export default defineFlatConfig([
       'no-var': 'error',
       'no-void': 'error',
       'no-with': 'error',
-      'object-curly-spacing': ['error', 'always'],
-      'object-property-newline': [
-        'error',
-        {
-          allowMultiplePropertiesPerLine: true,
-        },
-      ],
       'object-shorthand': ['error', 'always'],
       'one-var': [
         'error',
         {
           initialized: 'never',
-        },
-      ],
-      'operator-linebreak': [
-        'error',
-        'after',
-        {
-          overrides: {
-            '?': 'before',
-            ':': 'before',
-            '|>': 'before',
-          },
-        },
-      ],
-      'padded-blocks': [
-        'error',
-        {
-          blocks: 'never',
-          switches: 'never',
-          classes: 'never',
-        },
-      ],
-      'padding-line-between-statements': [
-        'error',
-        {
-          blankLine: 'always',
-          prev: '*',
-          next: ['multiline-const', 'multiline-let', 'multiline-expression'],
-        },
-        {
-          blankLine: 'always',
-          prev: ['multiline-const', 'multiline-let', 'multiline-expression'],
-          next: '*',
-        },
-        {
-          blankLine: 'always',
-          prev: '*',
-          next: 'block',
-        },
-        {
-          blankLine: 'always',
-          prev: 'block',
-          next: '*',
-        },
-        {
-          blankLine: 'always',
-          prev: '*',
-          next: 'block-like',
-        },
-        {
-          blankLine: 'always',
-          prev: 'block-like',
-          next: '*',
-        },
-        {
-          blankLine: 'any',
-          prev: '*',
-          next: 'return',
         },
       ],
       'prefer-destructuring': 'error',
@@ -354,16 +237,6 @@ export default defineFlatConfig([
       ],
       'prefer-rest-params': 'error',
       'quote-props': ['error', 'as-needed'],
-      'space-infix-ops': 'error',
-      'space-unary-ops': [
-        'error',
-        {
-          words: true,
-          nonwords: false,
-        },
-      ],
-      'template-curly-spacing': ['error', 'never'],
-      'template-tag-spacing': ['error', 'never'],
       'use-isnan': [
         'error',
         {

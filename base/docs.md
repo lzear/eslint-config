@@ -2,20 +2,6 @@
 
 ## Base rules
 
-### array-bracket-spacing
-
-Disallow spaces inside array brackets.
-
-```js
-// bad
-let heroAssociation = [ 'Saitama', 'Genos', 'King', 'Bang' ]
-```
-
-```js
-// good
-let heroAssociation = ['Saitama', 'Genos', 'King', 'Bang']
-```
-
 ### array-callback-return
 
 Require `return` statements in callbacks of array methods.
@@ -51,66 +37,6 @@ let getGeneiRedanLeader = () => {
 let getGeneiRedanLeader = () => 'Chrollo Lucilfer'
 ```
 
-### arrow-spacing
-
-Require to add spacing before and after the arrow in arrow functions.
-
-```js
-// bad
-let countSeriesLength = (episodes, duration)=>{
-  return episodes * duration
-}
-```
-
-```js
-// good
-let countSeriesLength = (episodes, duration) => {
-  return episodes * duration
-}
-```
-
-### block-spacing
-
-Require spaces inside of blocks.
-
-```js
-// bad
-let checkIfSerialIsEcchi = () => {return true}
-```
-
-```js
-// good
-let checkIfSerialIsEcchi = () => { return true }
-```
-
-### brace-style
-
-Declare brace style for blocks.
-
-```js
-// bad
-let getPreviewMessage = isHentai =>
-{
-  if (isHentai) {
-    showAgeWarning()
-  }
-  else {
-    showEnjoyWatchingMessage()
-  }
-}
-```
-
-```js
-// good
-let getPreviewMessage = isHentai => {
-  if (isHentai) {
-    showAgeWarning()
-  } else {
-    showEnjoyWatchingMessage()
-  }
-}
-```
-
 ### camelcase
 
 Require to use camelcase.
@@ -123,42 +49,6 @@ let spirited_away
 ```js
 // good
 let spiritedAway
-```
-
-### comma-style
-
-Require to add comma after and on the same line.
-
-```js
-// bad
-let travelers = [
-  'Riko'
-  , 'Reg'
-  , 'Nanachi'
-]
-```
-
-```js
-// good
-let travelers = [
-  'Riko',
-  'Reg',
-  'Nanachi',
-]
-```
-
-### computed-property-spacing
-
-Disallow to add spaces inside computed property brackets.
-
-```js
-// bad
-miyazakiTitles[ 'my-neighbor-totoro' ]
-```
-
-```js
-// good
-miyazakiTitles['my-neighbor-totoro']
 ```
 
 ### consistent-return
@@ -287,134 +177,6 @@ Require the use of `===` and `!==`
 // bad
 if (name == 'Akane Tsunemori') {
   crimeCoefficient = 32.5
-}
-```
-
-### func-call-spacing
-
-Disallow spacing between function identifiers and their invocations.
-
-```js
-// bad
-getRandomMechaSeries ()
-```
-
-```js
-// good
-getRandomMechaSeries()
-```
-
-### generator-star-spacing
-
-Require to add spaces before and after `*` operators in generator functions.
-
-```js
-// bad
-function* stressMob() {
-  yield "40"
-  yield "80"
-  yield "100"
-}
-```
-
-```js
-// good
-function * stressMob() {
-  yield "40"
-  yield "80"
-  yield "100"
-}
-```
-
-### key-spacing
-
-Require to add no space before colon and add space after colon.
-
-```js
-// bad
-let edward = {
-  firstName : 'Edward',
-  lastName : 'Elric',
-  gender : 'Male',
-  abilities : ['Alchemy', 'High intelligence'],
-}
-```
-
-```js
-// good
-let edward = {
-  firstName: 'Edward',
-  lastName: 'Elric',
-  gender: 'Male',
-  abilities: ['Alchemy', 'High intelligence'],
-}
-```
-
-### keyword-spacing
-
-Require to add spaces before and after keywords.
-
-```js
-// bad
-let harvestOfWheat
-if(spiritName === 'Holo'){
-  harvestOfWheat = true
-}else{
-  harvestOfWheat = false
-}
-```
-
-```js
-// good
-let harvestOfWheat
-if (spiritName === 'Holo') {
-  harvestOfWheat = true
-} else {
-  harvestOfWheat = false
-}
-```
-
-### lines-between-class-members
-
-Require to add an empty lines between class members.
-
-```js
-// bad
-class DeathNote {
-  notes = []
-  addNote(name, causeOfDeath) {
-    this.notes.push({
-      addedAt: new Date(),
-      causeOfDeath,
-      name,
-    })
-  }
-  showDeadPeopleList() {
-    this.notes.forEach(({ name }) => {
-      console.log(name)
-    })
-  }
-}
-```
-
-```js
-// good
-class DeathNote {
-  notes = []
-
-  addNote(name, causeOfDeath) {
-    this.notes.push({
-      addedAt: new Date(),
-      causeOfDeath,
-      name,
-    })
-  }
-
-  showDeadPeopleList() {
-    this.notes.forEach(({ name }) => {
-      console.log(name)
-    })
-  }
 }
 ```
 
@@ -953,18 +715,6 @@ let obj = 'Anya Forger \
         Test Subject "007"'
 ```
 
-### no-multiple-empty-lines
-
-Disallow multiple empty lines.
-
-```js
-// bad
-let name = 'David Martinez'
-
-
-let age = 18
-```
-
 ### no-nested-ternary
 
 Disallow nested ternary expressions.
@@ -1123,10 +873,6 @@ Disallow sparse arrays.
 // bad
 let myBand = ['Haruhi Suzumiya', 'Mikuru Asahina', , 'Yuki Nagato']
 ```
-
-### no-tabs
-
-Disallow all tabs.
 
 ### no-template-curly-in-string
 
@@ -1430,41 +1176,6 @@ Disallow `void` operators
 
 Disallow `with` statements.
 
-### object-curly-spacing
-
-Require to add spacing inside braces.
-
-```js
-// bad
-let cowboy = {name: 'Spike Spiegel', age: 27}
-```
-
-```js
-// good
-let cowboy = { name: 'Spike Spiegel', age: 27 }
-```
-
-### object-property-newline
-
-Require to place object properties on separate lines or one line.
-
-```js
-// bad
-let newFamily = {
-  father: 'Paul Greyrat',
-  mother: 'Zenith Greyrat', son: 'Rudeus Greyrat'
-}
-```
-
-```js
-// good
-let newFamily = {
-  father: 'Paul Greyrat',
-  mother: 'Zenith Greyrat',
-  son: 'Rudeus Greyrat'
-}
-```
-
 ### object-shorthand
 
 Require method and property shorthand syntax for object literals.
@@ -1499,51 +1210,6 @@ let rintarou = new Character('Rintarou Okabe'),
 // good
 let rintarou = new Character('Rintarou Okabe')
 let kurisu = new Character('Kurisu Makise')
-```
-
-### operator-linebreak
-
-Enforce consistent linebreak style for operators.
-
-### padded-blocks
-
-Disallow padding within blocks.
-
-```js
-// bad
-if (tokyoGodfathers.hasChild) {
-
-  tokyoGodfathers.findParents()
-
-}
-```
-
-```js
-// good
-if (tokyoGodfathers.hasChild) {
-  tokyoGodfathers.findParents()
-}
-```
-
-### padding-line-between-statements
-
-Require padding lines between statements
-
-```js
-// bad
-let getDoesNotExistName = () => {
-  let name = 'Mei Misaki'
-  return name
-}
-```
-
-```js
-// good
-let getDoesNotExistName = () => {
-  let name = 'Mei Misaki'
-
-  return name
-}
 ```
 
 ### prefer-destructuring
@@ -1605,32 +1271,6 @@ let mushishi = {
   'is-alive': true
 }
 ```
-
-### space-infix-ops
-
-Require to add spaces around infix operators.
-
-### space-unary-ops
-
-Require to add space after word unary operators and not to add after non word operator.
-
-### template-curly-spacing
-
-Disallow to add spaces around embedded expressions of template strings.
-
-```js
-// bad
-console.log(`We welcome the new member of hero association ${ name }`)
-```
-
-```js
-// good
-console.log(`We welcome the new member of hero association ${ name }`)
-```
-
-### template-tag-spacing
-
-Disallow to add space between template tags and their literals.
 
 ### use-isnan
 
