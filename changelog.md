@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.5.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v1.4.0...v1.5.0)
+
+### 🚀 Features
+
+- **astro:** Remove no-unused-css-selector astro rule ([4157d9a](https://github.com/azat-io/eslint-config/commit/4157d9a))
+- Remove all formatting rules ([253273b](https://github.com/azat-io/eslint-config/commit/253273b))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.4.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v1.3.0...v1.4.0)
