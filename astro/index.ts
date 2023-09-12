@@ -34,7 +34,6 @@ export default defineFlatConfig([
       'astro/no-deprecated-astro-resolve': 'error',
       'astro/no-deprecated-getentrybyslug': 'error',
       'astro/no-set-text-directive': 'error',
-      'astro/no-unused-css-selector': 'error',
       'astro/no-unused-define-vars-in-style': 'error',
       'astro/prefer-class-list-directive': 'error',
       'astro/prefer-object-class-list': 'error',

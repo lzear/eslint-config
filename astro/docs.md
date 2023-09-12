@@ -38,22 +38,6 @@ Disallow using deprecated `getEntryBySlug()`.
 
 Disallow use of `set:text`.
 
-### no-unused-css-selector
-
-Disallow selectors defined in `style` tag that don’t use in HTML.
-
-```astro
-{/* bad */}
-<div class="foo">
-</div>
-
-<style>
-  .unused {
-    color: red;
-  }
-</style>
-```
-
 ### no-unused-define-vars-in-style
 
 Disallow unused `define:vars={...}` in style tag.
