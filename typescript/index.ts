@@ -101,7 +101,9 @@ export default defineFlatConfig([
 
     settings: {
       'import/resolver': {
-        typescript: true,
+        typescript: {
+          alwaysTryTypes: true,
+        },
         node: {
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
