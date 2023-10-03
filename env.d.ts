@@ -12,6 +12,13 @@ declare module 'eslint-plugin-n' {
   export default plugin
 }
 
+declare module 'eslint-plugin-node-import' {
+  import type { Plugin } from 'eslint-define-config'
+
+  let plugin: Plugin
+  export default plugin
+}
+
 declare module 'eslint-plugin-prefer-arrow' {
   import type { Plugin } from 'eslint-define-config'
 

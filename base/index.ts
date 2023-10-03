@@ -1,6 +1,7 @@
 import perfectionistLineLength from 'eslint-plugin-perfectionist/configs/recommended-line-length'
 import { defineFlatConfig } from 'eslint-define-config'
 import preferArrow from 'eslint-plugin-prefer-arrow'
+import nodeImport from 'eslint-plugin-node-import'
 import preferLet from 'eslint-plugin-prefer-let'
 import eslintImport from 'eslint-plugin-import'
 import promise from 'eslint-plugin-promise'
@@ -27,6 +28,7 @@ export default defineFlatConfig([
 
     plugins: {
       'prefer-arrow': preferArrow,
+      'node-import': nodeImport,
       'prefer-let': preferLet,
       import: eslintImport,
       promise,
@@ -283,6 +285,8 @@ export default defineFlatConfig([
       'n/no-exports-assign': 'error',
       'n/no-path-concat': 'error',
       'n/process-exit-as-throw': 'error',
+
+      'node-import/prefer-node-protocol': 'error',
 
       'prefer-arrow/prefer-arrow-functions': [
         'error',
