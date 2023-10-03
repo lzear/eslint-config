@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.6.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v1.5.1...v1.6.0)
+
+### 🚀 Features
+
+- Add eslint-plugin-node-import plugin ([4409c70](https://github.com/azat-io/eslint-config/commit/4409c70))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.5.1
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v1.5.0...v1.5.1)
