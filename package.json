@@ -20,11 +20,11 @@
   },
   "devDependencies": {
     "@azat-io/eslint-config-typescript": "workspace:^",
-    "@commitlint/cli": "^17.7.1",
+    "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
-    "@types/node": "^20.6.0",
+    "@types/node": "^20.8.2",
     "changelogen": "^0.5.5",
-    "eslint": "^8.49.0",
+    "eslint": "^8.50.0",
     "prettier": "^3.0.3",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.2.2"
