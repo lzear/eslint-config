@@ -37,25 +37,7 @@ const config = defineFlatConfig([
     },
 
     rules: {
-      'import/consistent-type-specifier-style': [2, 'prefer-top-level'],
-      'import/export': 2,
-      'import/first': 2,
-      'import/named': 2,
-      'import/no-duplicates': 2,
-      'import/no-empty-named-blocks': 2,
-      'import/no-extraneous-dependencies': [
-        2,
-        {
-          devDependencies: true,
-          optionalDependencies: false,
-          peerDependencies: false,
-        },
-      ],
-      'import/no-named-default': 2,
-      'import/no-self-import': 2,
-      'import/no-useless-path-segments': 2,
-      'import/no-webpack-loader-syntax': 2,
-
+      ...eslintImport.configs.recommended.rules,
       'n/handle-callback-err': [2, '^(err|error)$'],
       'n/no-deprecated-api': 2,
       'n/no-exports-assign': 2,
