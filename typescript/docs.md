@@ -1,6 +1,6 @@
-# @azat-io/eslint-config-typescript
+# @lzear/eslint-config-typescript
 
-This config extends `@azat-io/eslint-config`.
+This config extends `@lzear/eslint-config`.
 
 ## TypeScript rules
 

@@ -1,6 +1,6 @@
 import type { FlatESLintConfig } from 'eslint-define-config'
 
-import typescriptConfig from '@azat-io/eslint-config-typescript'
+import typescriptConfig from '@lzear/eslint-config-typescript'
 import testingLibrary from 'eslint-plugin-testing-library'
 import { defineFlatConfig } from 'eslint-define-config'
 import reactHooks from 'eslint-plugin-react-hooks'

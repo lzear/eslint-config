@@ -1,11 +1,11 @@
 {
-  "name": "@azat-io/eslint-config-monorepo",
+  "name": "@lzear/eslint-config-monorepo",
   "description": "ESLint shareable config",
   "version": "1.7.1",
   "type": "module",
   "private": true,
-  "repository": "azat-io/eslint-config",
-  "author": "Azat S. <to@azat.io>",
+  "repository": "lzear/eslint-config",
+  "author": "lzear",
   "license": "MIT",
   "scripts": {
     "build": "yarn workspaces run build",
@@ -19,9 +19,9 @@
     "test": "yarn test:format && yarn test:js && yarn test:types"
   },
   "devDependencies": {
-    "@azat-io/eslint-config-typescript": "workspace:^",
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
+    "@lzear/eslint-config-typescript": "*",
     "@types/node": "^20.8.2",
     "changelogen": "^0.5.5",
     "eslint": "^8.50.0",

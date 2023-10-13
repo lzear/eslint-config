@@ -1,4 +1,4 @@
-# @azat-io/eslint-config
+# @lzear/eslint-config
 
 ## Base rules
 

@@ -1,9 +1,9 @@
 {
-  "name": "@azat-io/eslint-config-react",
+  "name": "@lzear/eslint-config-react",
   "description": "ESLint shareable config for React",
   "version": "1.7.1",
-  "repository": "azat-io/eslint-config",
-  "author": "Azat S. <to@azat.io>",
+  "repository": "lzear/eslint-config",
+  "author": "lzear",
   "license": "MIT",
   "keywords": [
     "eslint",
@@ -49,7 +49,7 @@
     "eslint-plugin-vitest": "^0.3.2"
   },
   "dependencies": {
-    "@azat-io/eslint-config-typescript": "*"
+    "@lzear/eslint-config-typescript": "*"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.4",
