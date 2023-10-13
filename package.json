@@ -25,6 +25,7 @@
     "@types/node": "^20.8.2",
     "changelogen": "^0.5.5",
     "eslint": "^8.50.0",
+    "eslint-define-config": "^1.23.0",
     "prettier": "^3.0.3",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.2.2"
