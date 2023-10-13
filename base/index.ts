@@ -47,13 +47,7 @@ const config = defineFlatConfig([
           classPropertiesAllowed: false,
         },
       ],
-
-      'promise/no-multiple-resolved': 2,
-      'promise/no-nesting': 2,
-      'promise/no-promise-in-callback': 2,
-      'promise/param-names': 2,
-      'promise/prefer-await-to-then': 2,
-      'promise/valid-params': 2,
+      ...promise.configs.recommended.rules,
 
       'sonarjs/no-collapsible-if': 2,
       'sonarjs/no-duplicated-branches': 2,
