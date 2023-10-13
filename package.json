@@ -4,8 +4,8 @@
   "version": "1.5.1",
   "type": "module",
   "private": true,
-  "repository": "azat-io/eslint-config",
-  "author": "Azat S. <to@azat.io>",
+  "repository": "lzear/eslint-config",
+  "author": "lzear",
   "license": "MIT",
   "scripts": {
     "build": "pnpm --recursive run build",

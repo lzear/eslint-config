@@ -6,7 +6,7 @@
 
 Shareable ESLint config for TypeScript projects.
 
-See [docs](https://github.com/azat-io/eslint-config/blob/main/typescript/docs.md) for a list of all rules.
+See [docs](https://github.com/lzear/eslint-config/blob/main/typescript/docs.md) for a list of all rules.
 
 ## Installation
 
