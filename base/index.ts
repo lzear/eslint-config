@@ -5,7 +5,6 @@ import eslintImport from 'eslint-plugin-import'
 import promise from 'eslint-plugin-promise'
 import unicorn from 'eslint-plugin-unicorn'
 import sonarjs from 'eslint-plugin-sonarjs'
-import vitest from 'eslint-plugin-vitest'
 import n from 'eslint-plugin-n'
 import globals from 'globals'
 import js from '@eslint/js'
@@ -32,7 +31,6 @@ const config = defineFlatConfig([
       promise,
       sonarjs,
       unicorn,
-      vitest,
       n,
     },
 
@@ -50,53 +48,6 @@ const config = defineFlatConfig([
       ...promise.configs.recommended.rules,
       ...sonarjs.configs.recommended.rules,
       ...unicorn.configs.recommended.rules,
-    },
-  },
-
-  {
-    files: [
-      '**/test/*.js',
-      '**/test/*.ts',
-      '**/test/*.jsx',
-      '**/test/*.tsx',
-      '**/*.test.js',
-      '**/*.test.ts',
-      '**/*.test.jsx',
-      '**/*.test.tsx',
-    ],
-
-    plugins: {
-      vitest,
-    },
-
-    rules: {
-      'vitest/consistent-test-filename': 2,
-      'vitest/consistent-test-it': [2, { fn: 'it' }],
-      'vitest/no-alias-methods': 2,
-      'vitest/no-commented-out-tests': 2,
-      'vitest/no-conditional-expect': 2,
-      'vitest/no-conditional-in-test': 2,
-      'vitest/no-conditional-tests': 2,
-      'vitest/no-disabled-tests': 2,
-      'vitest/no-duplicate-hooks': 2,
-      'vitest/no-focused-tests': 2,
-      'vitest/no-identical-title': 2,
-      'vitest/no-standalone-expect': 2,
-      'vitest/no-test-return-statement': 2,
-      'vitest/prefer-comparison-matcher': 2,
-      'vitest/prefer-expect-resolves': 2,
-      'vitest/prefer-hooks-in-order': 2,
-      'vitest/prefer-hooks-on-top': 2,
-      'vitest/prefer-lowercase-title': 2,
-      'vitest/prefer-spy-on': 2,
-      'vitest/prefer-to-be-falsy': 2,
-      'vitest/prefer-to-be-truthy': 2,
-      'vitest/prefer-to-be': 2,
-      'vitest/prefer-to-contain': 2,
-      'vitest/prefer-to-have-length': 2,
-      'vitest/require-top-level-describe': 2,
-      'vitest/valid-describe-callback': 2,
-      'vitest/valid-expect': 2,
     },
   },
   perfectionistLineLength,
