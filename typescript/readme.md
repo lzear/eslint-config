@@ -13,7 +13,7 @@ See [docs](https://github.com/lzear/eslint-config/blob/main/typescript/docs.md) 
 1. Install package:
 
 ```sh
-yarn add --save-dev eslint @lzear/eslint-config-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-n eslint-plugin-node-import eslint-plugin-perfectionist eslint-plugin-prefer-arrow eslint-plugin-promise eslint-plugin-sonarjs eslint-plugin-unicorn eslint-plugin-vitest
+yarn add --save-dev eslint @lzear/eslint-config-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-n eslint-plugin-node-import eslint-plugin-perfectionist eslint-plugin-prefer-arrow eslint-plugin-promise eslint-plugin-sonarjs eslint-plugin-unicorn
 ```
 
 2. Create ESLint configuration file `eslint.config.js`:
