@@ -38,12 +38,7 @@ const config = defineFlatConfig([
 
     rules: {
       ...eslintImport.configs.recommended.rules,
-      'n/handle-callback-err': [2, '^(err|error)$'],
-      'n/no-deprecated-api': 2,
-      'n/no-exports-assign': 2,
-      'n/no-path-concat': 2,
-      'n/process-exit-as-throw': 2,
-
+      ...n.configs.recommended.rules,
       'prefer-arrow/prefer-arrow-functions': [
         2,
         {
