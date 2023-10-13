@@ -49,34 +49,7 @@ const config = defineFlatConfig([
       ],
       ...promise.configs.recommended.rules,
       ...sonarjs.configs.recommended.rules,
-      'unicorn/better-regex': 2,
-      'unicorn/catch-error-name': 2,
-      'unicorn/custom-error-definition': 2,
-      'unicorn/no-for-loop': 2,
-      'unicorn/no-instanceof-array': 2,
-      'unicorn/no-invalid-remove-event-listener': 2,
-      'unicorn/no-typeof-undefined': 2,
-      'unicorn/no-unnecessary-await': 2,
-      'unicorn/no-unused-properties': 2,
-      'unicorn/no-useless-spread': 2,
-      'unicorn/no-useless-undefined': [
-        2,
-        {
-          checkArguments: false,
-        },
-      ],
-      'unicorn/prefer-add-event-listener': 2,
-      'unicorn/prefer-array-index-of': 2,
-      'unicorn/prefer-array-some': 2,
-      'unicorn/prefer-at': 2,
-      'unicorn/prefer-date-now': 2,
-      'unicorn/prefer-default-parameters': 2,
-      'unicorn/prefer-includes': 2,
-      'unicorn/prefer-keyboard-event-key': 2,
-      'unicorn/prefer-logical-operator-over-ternary': 2,
-      'unicorn/prefer-string-replace-all': 2,
-      'unicorn/prefer-string-slice': 2,
-      'unicorn/prefer-string-starts-ends-with': 2,
+      ...unicorn.configs.recommended.rules,
     },
   },
 
@@ -127,6 +100,11 @@ const config = defineFlatConfig([
     },
   },
   perfectionistLineLength,
+  {
+    rules: {
+      'unicorn/prevent-abbreviations': [0, { checkProperties: true }],
+    },
+  },
 ])
 
 export default config
