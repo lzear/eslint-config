@@ -1,6 +1,6 @@
-# @azat-io/eslint-config-react
+# @lzear/eslint-config-react
 
-This config extends `@azat-io/eslint-config-typescript`.
+This config extends `@lzear/eslint-config-typescript`.
 
 ## React rules
 

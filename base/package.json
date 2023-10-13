@@ -1,5 +1,5 @@
 {
-  "name": "@azat-io/eslint-config",
+  "name": "@lzear/eslint-config",
   "description": "ESLint shareable config",
   "version": "1.5.1",
   "repository": "azat-io/eslint-config",

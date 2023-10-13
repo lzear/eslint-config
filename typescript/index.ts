@@ -1,7 +1,7 @@
 import eslintTypescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import { defineFlatConfig } from 'eslint-define-config'
-import baseConfig from '@azat-io/eslint-config'
+import baseConfig from '@lzear/eslint-config'
 
 export default defineFlatConfig([
   ...baseConfig,

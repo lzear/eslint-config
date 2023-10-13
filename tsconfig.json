@@ -12,9 +12,9 @@
     "strict": true,
     "noEmit": true,
     "paths": {
-      "@azat-io/eslint-config-typescript": ["./typescript"],
-      "@azat-io/eslint-config-react": ["./react"],
-      "@azat-io/eslint-config": ["./base"]
+      "@lzear/eslint-config-typescript": ["./typescript"],
+      "@lzear/eslint-config-react": ["./react"],
+      "@lzear/eslint-config": ["./base"]
     }
   },
   "include": ["**/*.ts"],

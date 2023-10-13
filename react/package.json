@@ -1,5 +1,5 @@
 {
-  "name": "@azat-io/eslint-config-react",
+  "name": "@lzear/eslint-config-react",
   "description": "ESLint shareable config for React",
   "version": "1.5.1",
   "repository": "azat-io/eslint-config",
@@ -49,7 +49,7 @@
     "eslint-plugin-vitest": "^0.3.1"
   },
   "dependencies": {
-    "@azat-io/eslint-config-typescript": "workspace:^"
+    "@lzear/eslint-config-typescript": "workspace:^"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.0",

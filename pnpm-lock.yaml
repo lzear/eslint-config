@@ -8,15 +8,15 @@ importers:
 
   .:
     devDependencies:
-      '@azat-io/eslint-config-typescript':
-        specifier: workspace:^
-        version: link:typescript
       '@commitlint/cli':
         specifier: ^17.7.1
         version: 17.7.1
       '@commitlint/config-conventional':
         specifier: ^17.7.0
         version: 17.7.0
+      '@lzear/eslint-config-typescript':
+        specifier: workspace:^
+        version: link:typescript
       '@types/node':
         specifier: ^20.6.0
         version: 20.6.0
@@ -84,7 +84,7 @@ importers:
 
   react:
     dependencies:
-      '@azat-io/eslint-config-typescript':
+      '@lzear/eslint-config-typescript':
         specifier: workspace:^
         version: link:../typescript
     devDependencies:
@@ -148,7 +148,7 @@ importers:
 
   typescript:
     dependencies:
-      '@azat-io/eslint-config':
+      '@lzear/eslint-config':
         specifier: workspace:^
         version: link:../base
       eslint-import-resolver-typescript:

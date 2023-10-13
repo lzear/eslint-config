@@ -1,5 +1,5 @@
 {
-  "name": "@azat-io/eslint-config-monorepo",
+  "name": "@lzear/eslint-config-monorepo",
   "description": "ESLint shareable config",
   "version": "1.5.1",
   "type": "module",
@@ -19,7 +19,7 @@
     "test": "pnpm run /^test:/"
   },
   "devDependencies": {
-    "@azat-io/eslint-config-typescript": "workspace:^",
+    "@lzear/eslint-config-typescript": "workspace:^",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "^20.6.0",

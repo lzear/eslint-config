@@ -6,9 +6,9 @@ ESLint sharable configs.
 
 This repo contains the following packages:
 
-- [`@azat-io/eslint-config`](https://github.com/azat-io/eslint-config/tree/main/base)
-- [`@azat-io/eslint-config-typescript`](https://github.com/azat-io/eslint-config/tree/main/typescript)
-- [`@azat-io/eslint-config-react`](https://github.com/azat-io/eslint-config/tree/main/react)
+- [`@lzear/eslint-config`](https://github.com/azat-io/eslint-config/tree/main/base)
+- [`@lzear/eslint-config-typescript`](https://github.com/azat-io/eslint-config/tree/main/typescript)
+- [`@lzear/eslint-config-react`](https://github.com/azat-io/eslint-config/tree/main/react)
 
 ## See also
 
