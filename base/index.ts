@@ -1,7 +1,6 @@
 import perfectionistLineLength from 'eslint-plugin-perfectionist/configs/recommended-line-length'
 import { defineFlatConfig } from 'eslint-define-config'
 import preferArrow from 'eslint-plugin-prefer-arrow'
-import preferLet from 'eslint-plugin-prefer-let'
 import eslintImport from 'eslint-plugin-import'
 import promise from 'eslint-plugin-promise'
 import unicorn from 'eslint-plugin-unicorn'
@@ -27,7 +26,6 @@ export default defineFlatConfig([
 
     plugins: {
       'prefer-arrow': preferArrow,
-      'prefer-let': preferLet,
       import: eslintImport,
       promise,
       sonarjs,
@@ -292,8 +290,6 @@ export default defineFlatConfig([
           classPropertiesAllowed: false,
         },
       ],
-
-      'prefer-let/prefer-let': 'error',
 
       'promise/no-multiple-resolved': 'error',
       'promise/no-nesting': 'error',

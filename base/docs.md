@@ -1528,12 +1528,6 @@ let checkInventory = () => {
 }
 ```
 
-## Prefer let rules
-
-### prefer-let
-
-Encourage semantic of usage of `let` and `const`.
-
 ## Promise rules
 
 ### no-multiple-resolved

@@ -19,13 +19,6 @@ declare module 'eslint-plugin-prefer-arrow' {
   export default plugin
 }
 
-declare module 'eslint-plugin-prefer-let' {
-  import type { Plugin } from 'eslint-define-config'
-
-  let plugin: Plugin
-  export default plugin
-}
-
 declare module 'eslint-plugin-promise' {
   import type { Plugin } from 'eslint-define-config'
 
