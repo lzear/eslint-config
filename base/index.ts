@@ -60,6 +60,9 @@ const config = defineFlatConfig([
   perfectionistLineLength,
   {
     rules: {
+      'prefer-const': 2,
+      'unicorn/no-abusive-eslint-disable': 0,
+      'unicorn/no-null': 0,
       'unicorn/prevent-abbreviations': [0, { checkProperties: true }],
     },
   },
