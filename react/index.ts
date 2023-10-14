@@ -56,7 +56,7 @@ const config = defineFlatConfig([
       'testing-library': testingLibrary,
     },
 
-    rules: testingLibrary.configs.recommended.rules,
+    rules: testingLibrary.configs.react.rules,
   },
 ]) as unknown as FlatESLintConfig[]
 
