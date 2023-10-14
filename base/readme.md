@@ -14,7 +14,7 @@ list of all rules.
 1. Install package:
 
 ```sh
-yarn add --save-dev eslint @lzear/eslint-config eslint-plugin-import eslint-plugin-n eslint-plugin-node-import eslint-plugin-perfectionist eslint-plugin-prefer-arrow eslint-plugin-promise eslint-plugin-sonarjs eslint-plugin-unicorn
+yarn add --save-dev eslint @lzear/eslint-config eslint-plugin-import eslint-plugin-n eslint-plugin-node-import eslint-plugin-prefer-arrow eslint-plugin-promise eslint-plugin-sonarjs eslint-plugin-unicorn
 ```
 
 2. Create ESLint configuration file `eslint.config.js`:

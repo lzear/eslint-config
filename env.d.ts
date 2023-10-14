@@ -88,10 +88,4 @@ declare module 'eslint-plugin-testing-library' {
   export default plugin
 }
 
-declare module 'eslint-plugin-perfectionist/configs/recommended-line-length' {
-  import type { PredefinedConfig } from 'eslint-define-config'
-
-  let config: PredefinedConfig
-}
-
 export { type FlatESLintConfig as default } from 'eslint-define-config'

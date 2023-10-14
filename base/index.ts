@@ -1,4 +1,3 @@
-import perfectionistLineLength from 'eslint-plugin-perfectionist/configs/recommended-line-length'
 import { defineFlatConfig } from 'eslint-define-config'
 import preferArrow from 'eslint-plugin-prefer-arrow'
 import nodeImport from 'eslint-plugin-node-import'
@@ -57,7 +56,6 @@ const config = defineFlatConfig([
       ...unicorn.configs.recommended.rules,
     },
   },
-  perfectionistLineLength,
   {
     rules: {
       'prefer-const': 2,
