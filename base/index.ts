@@ -3,6 +3,7 @@ import { defineFlatConfig } from 'eslint-define-config'
 import preferArrow from 'eslint-plugin-prefer-arrow'
 import nodeImport from 'eslint-plugin-node-import'
 import eslintImport from 'eslint-plugin-import'
+import prettier from 'eslint-plugin-prettier'
 import promise from 'eslint-plugin-promise'
 import unicorn from 'eslint-plugin-unicorn'
 import sonarjs from 'eslint-plugin-sonarjs'
@@ -61,6 +62,10 @@ const config = defineFlatConfig([
     rules: {
       'unicorn/prevent-abbreviations': [0, { checkProperties: true }],
     },
+  },
+  {
+    plugins: { prettier },
+    rules: prettier.configs.recommended.rules,
   },
 ])
 
