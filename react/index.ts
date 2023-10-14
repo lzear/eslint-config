@@ -56,29 +56,6 @@ export default defineFlatConfig([
       'testing-library': testingLibrary,
     },
 
-    rules: {
-      'testing-library/await-async-queries': 2,
-      'testing-library/await-async-utils': 2,
-      'testing-library/no-await-sync-events': [
-        2,
-        {
-          eventModules: ['fire-event'],
-        },
-      ],
-      'testing-library/no-await-sync-queries': 2,
-      'testing-library/no-container': 2,
-      'testing-library/no-debugging-utils': 2,
-      'testing-library/no-dom-import': 2,
-      'testing-library/no-global-regexp-flag-in-query': 2,
-      'testing-library/no-render-in-lifecycle': 2,
-      'testing-library/no-unnecessary-act': 2,
-      'testing-library/no-wait-for-multiple-assertions': 2,
-      'testing-library/no-wait-for-side-effects': 2,
-      'testing-library/prefer-find-by': 2,
-      'testing-library/prefer-presence-queries': 2,
-      'testing-library/prefer-query-by-disappearance': 2,
-      'testing-library/prefer-screen-queries': 2,
-      'testing-library/prefer-user-event': 2,
-    },
+    rules: testingLibrary.configs.react.rules,
   },
 ]) as unknown as FlatESLintConfig[]
