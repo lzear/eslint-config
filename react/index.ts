@@ -28,67 +28,7 @@ export default defineFlatConfig([
     },
 
     rules: {
-      'react/boolean-prop-naming': [
-        2,
-        {
-          rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
-        },
-      ],
-      'react/function-component-definition': [
-        2,
-        {
-          namedComponents: 'arrow-function',
-        },
-      ],
-      'react/hook-use-state': [
-        2,
-        {
-          allowDestructuredState: true,
-        },
-      ],
-      'react/jsx-boolean-value': 2,
-      'react/jsx-closing-bracket-location': 2,
-      'react/jsx-closing-tag-location': 2,
-      'react/jsx-curly-brace-presence': [
-        2,
-        {
-          props: 'never',
-          children: 'never',
-          propElementValues: 'always',
-        },
-      ],
-      'react/jsx-curly-spacing': [2, 'never'],
-      'react/jsx-equals-spacing': [2, 'never'],
-      'react/jsx-filename-extension': [
-        2,
-        {
-          extensions: ['.jsx', '.tsx'],
-        },
-      ],
-      'react/jsx-fragments': 2,
-      'react/jsx-handler-names': 2,
-      'react/jsx-key': 2,
-      'react/jsx-no-comment-textnodes': 2,
-      'react/jsx-no-duplicate-props': 2,
-      'react/jsx-no-target-blank': 2,
-      'react/jsx-no-undef': 2,
-      'react/jsx-no-useless-fragment': 2,
-      'react/jsx-pascal-case': 2,
-      'react/jsx-tag-spacing': 2,
-      'react/jsx-uses-vars': 2,
-      'react/no-children-prop': 2,
-      'react/no-deprecated': 2,
-      'react/no-unescaped-entities': 2,
-      'react/no-unknown-property': 2,
-      'react/self-closing-comp': [
-        2,
-        {
-          component: true,
-          html: true,
-        },
-      ],
-      'react/style-prop-object': 2,
-      'react/void-dom-elements-no-children': 2,
+      ...react.configs.recommended.rules,
 
       'react-hooks/rules-of-hooks': 2,
       'react-hooks/exhaustive-deps': 2,
