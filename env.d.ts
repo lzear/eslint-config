@@ -1,3 +1,9 @@
+import type { Linter } from 'eslint'
+
+interface Configs {
+  configs: { recommended: { rules: Linter.RulesRecord } }
+}
+
 declare module 'eslint-plugin-import' {
   import type { Plugin } from 'eslint-define-config'
 
@@ -47,13 +53,6 @@ declare module 'eslint-plugin-unicorn' {
   export default plugin
 }
 
-declare module '@typescript-eslint/eslint-plugin' {
-  import type { Plugin } from 'eslint-define-config'
-
-  let plugin: Plugin
-  export default plugin
-}
-
 declare module '@typescript-eslint/parser' {
   import type { Parser } from 'eslint-define-config'
 
@@ -93,5 +92,6 @@ declare module 'eslint-plugin-perfectionist/configs/recommended-line-length' {
   import type { PredefinedConfig } from 'eslint-define-config'
 
   let config: PredefinedConfig
-  export default FlatESLintConfig
 }
+
+export { type FlatESLintConfig as default } from 'eslint-define-config'
