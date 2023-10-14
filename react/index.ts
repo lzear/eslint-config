@@ -30,15 +30,7 @@ export default defineFlatConfig([
     rules: {
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'jsx-a11y/alt-text': 2,
-      'jsx-a11y/anchor-has-content': 2,
-      'jsx-a11y/anchor-is-valid': 2,
-      'jsx-a11y/aria-props': 2,
-      'jsx-a11y/aria-proptypes': 2,
-      'jsx-a11y/aria-role': 2,
-      'jsx-a11y/heading-has-content': 2,
-      'jsx-a11y/no-aria-hidden-on-focusable': 2,
-      'jsx-a11y/prefer-tag-over-role': 2,
+      ...jsxA11y.configs.recommended.rules,
     },
 
     settings: {
