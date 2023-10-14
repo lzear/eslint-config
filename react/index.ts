@@ -7,7 +7,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import react from 'eslint-plugin-react'
 
-export default defineFlatConfig([
+const config = defineFlatConfig([
   ...typescriptConfig,
 
   {
@@ -59,3 +59,5 @@ export default defineFlatConfig([
     rules: testingLibrary.configs.react.rules,
   },
 ]) as unknown as FlatESLintConfig[]
+
+export default config
