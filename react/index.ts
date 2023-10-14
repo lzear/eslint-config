@@ -29,10 +29,7 @@ export default defineFlatConfig([
 
     rules: {
       ...react.configs.recommended.rules,
-
-      'react-hooks/rules-of-hooks': 2,
-      'react-hooks/exhaustive-deps': 2,
-
+      ...reactHooks.configs.recommended.rules,
       'jsx-a11y/alt-text': 2,
       'jsx-a11y/anchor-has-content': 2,
       'jsx-a11y/anchor-is-valid': 2,
