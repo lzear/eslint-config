@@ -19,6 +19,13 @@ declare module 'eslint-plugin-prefer-arrow' {
   export default plugin
 }
 
+declare module 'eslint-plugin-prettier' {
+  import type { Plugin } from 'eslint-define-config'
+
+  const plugin: Plugin & Configs
+  export default plugin
+}
+
 declare module 'eslint-plugin-promise' {
   import type { Plugin } from 'eslint-define-config'
 
