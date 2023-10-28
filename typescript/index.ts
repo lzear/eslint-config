@@ -29,7 +29,10 @@ const config = defineFlatConfig([
         node: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
       },
     },
-    rules: eslintTypescript.configs.recommended.rules,
+    rules: {
+      ...eslintTypescript.configs.recommended.rules,
+      ...eslintTypescript.configs['eslint-recommended'].rules,
+    },
   } as FlatESLintConfigItem,
 ] satisfies FlatESLintConfigItem[])
 

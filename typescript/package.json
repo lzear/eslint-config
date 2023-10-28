@@ -2,6 +2,7 @@
   "name": "@lzear/eslint-config-typescript",
   "description": "ESLint shareable config for TypeScript",
   "version": "1.5.1",
+  "type": "module",
   "repository": "lzear/eslint-config",
   "author": "lzear",
   "license": "MIT",
