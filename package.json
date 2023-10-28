@@ -36,5 +36,8 @@
       "react",
       "typescript"
     ]
+  },
+  "volta": {
+    "node": "20.8.1"
   }
 }
