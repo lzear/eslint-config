@@ -67,5 +67,8 @@
     "eslint-plugin-unicorn": "^48.0.1",
     "vite": "^4.4.9",
     "vite-plugin-dts": "^3.5.3"
+  },
+  "volta": {
+    "extends": "../package.json"
   }
 }
