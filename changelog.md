@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.6.2
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v1.6.1...v1.6.2)
+
+### 🐞 Bug Fixes
+
+- Support astro modules by js and ts files ([d931932](https://github.com/azat-io/eslint-config/commit/d931932))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.6.1
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v1.6.0...v1.6.1)
