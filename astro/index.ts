@@ -49,6 +49,13 @@ export default defineFlatConfig([
       'jsx-a11y/heading-has-content': 'error',
       'jsx-a11y/no-aria-hidden-on-focusable': 'error',
       'jsx-a11y/prefer-tag-over-role': 'error',
+
+      'import/no-unresolved': [
+        'error',
+        {
+          ignore: ['^astro:'],
+        },
+      ],
     },
   },
 ])
