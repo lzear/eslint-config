@@ -53,13 +53,12 @@ export default defineFlatConfig([
   },
 
   {
-    files: ['**/*.astro', '**/*.ts', '**/*.js'],
-
+    files: ['**/*.astro', '**/*.ts'],
     rules: {
       'import/no-unresolved': [
         'error',
         {
-          ignore: ['^astro:'],
+          ignore: ['astro:transitions', 'astro:content', 'astro:assets'],
         },
       ],
     },
