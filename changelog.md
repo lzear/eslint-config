@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.6.3
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v1.6.2...v1.6.3)
+
+### 🐞 Bug Fixes
+
+- Fix loading astro packages ([e9b30f0](https://github.com/azat-io/eslint-config/commit/e9b30f0))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.6.2
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v1.6.1...v1.6.2)
