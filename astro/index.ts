@@ -9,7 +9,7 @@ export default defineFlatConfig([
   ...typescriptConfig,
 
   {
-    ignores: ['.astro/**'],
+    ignores: ['**/.astro/**'],
   },
   {
     files: ['**/*.astro'],
