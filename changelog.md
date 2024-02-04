@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.7.1
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v1.7.0...v1.7.1)
+
+### 🐞 Bug Fixes
+
+- Fix astro ignore pattern ([d5119e2](https://github.com/azat-io/eslint-config/commit/d5119e2))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v1.7.0
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v1.6.3...v1.7.0)
