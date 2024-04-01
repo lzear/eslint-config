@@ -45,7 +45,7 @@
     "eslint-plugin-vitest": "^0.3.2"
   },
   "dependencies": {
-    "@azat-io/eslint-config": "workspace:^",
+    "@azat-io/eslint-config": "*",
     "eslint-import-resolver-typescript": "^3.6.1"
   },
   "devDependencies": {

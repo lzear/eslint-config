@@ -1,4 +1,4 @@
 {
-  "pre-commit": "pnpm run test",
-  "commit-msg": "pnpm exec commitlint -e \"$@\""
+  "pre-commit": "yarn run test",
+  "commit-msg": "yarn run commitlint -e \"$@\""
 }

@@ -49,7 +49,7 @@
     "eslint-plugin-vitest": "^0.3.2"
   },
   "dependencies": {
-    "@azat-io/eslint-config-typescript": "workspace:^"
+    "@azat-io/eslint-config-typescript": "*"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.4",

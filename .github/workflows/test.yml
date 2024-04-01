@@ -14,22 +14,17 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: install node
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: pnpm
+          cache: yarn
 
       - name: install dependencies
-        run: pnpm install --frozen-lockfile --ignore-scripts
+        run: yarn install --frozen-lockfile
 
       - name: build
-        run: pnpm build
+        run: yarn build
 
       - name: test
-        run: pnpm test
+        run: yarn test

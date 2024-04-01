@@ -8,15 +8,15 @@
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",
   "scripts": {
-    "build": "pnpm --recursive run build",
-    "release": "pnpm release:check && pnpm release:version && pnpm release:publish",
-    "release:check": "pnpm test && pnpm run build",
-    "release:publish": "pnpm --recursive publish",
+    "build": "yarn workspaces run build",
+    "release": "yarn release:check && yarn release:version && yarn release:publish",
+    "release:check": "yarn test && yarn run build",
+    "release:publish": "yarn workspaces foreach publish",
     "release:version": "changelogen --output changelog.md --release --push && prettier --write changelog.md",
     "test:format": "prettier --check \"**/*.{js,ts,json,md,yml}\"",
     "test:js": "eslint **/*.{js,ts}",
     "test:types": "tsc --noEmit --pretty",
-    "test": "pnpm run /^test:/"
+    "test": "yarn test:format && yarn test:js && yarn test:types"
   },
   "devDependencies": {
     "@azat-io/eslint-config-typescript": "workspace:^",
@@ -28,5 +28,12 @@
     "prettier": "^3.0.3",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.2.2"
+  },
+  "workspaces": {
+    "packages": [
+      "base",
+      "react",
+      "typescript"
+    ]
   }
 }
