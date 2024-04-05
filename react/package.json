@@ -1,7 +1,7 @@
 {
   "name": "@lzear/eslint-config-react",
   "description": "ESLint shareable config for React",
-  "version": "1.7.1",
+  "version": "0.0.1",
   "repository": "lzear/eslint-config",
   "author": "lzear",
   "license": "MIT",
