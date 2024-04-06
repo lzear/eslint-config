@@ -8,8 +8,7 @@ import nodeImport from 'eslint-plugin-node-import'
 // @ts-expect-error - no types
 import preferArrow from 'eslint-plugin-prefer-arrow'
 import prettier from 'eslint-plugin-prettier'
-// @ts-expect-error - no types
-import promise from 'eslint-plugin-promise'
+// import promise from 'eslint-plugin-promise'
 // @ts-expect-error - no types
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 // import sonarjs from 'eslint-plugin-sonarjs'
@@ -37,7 +36,7 @@ const configs: FlatESLintConfig[] = [
       'prefer-arrow': preferArrow,
       'node-import': nodeImport,
       // import: eslintImport,
-      promise,
+      // promise,
       // sonarjs,
       unicorn,
       n,
@@ -60,7 +59,7 @@ const configs: FlatESLintConfig[] = [
         },
       ],
 
-      ...promise.configs.recommended.rules,
+      // ...promise.configs.recommended.rules,
 
       'simple-import-sort/imports': 2,
       'simple-import-sort/exports': 2,

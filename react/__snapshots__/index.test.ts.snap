@@ -109,11 +109,6 @@ exports[`base config > matches error rules snapshot 1`] = `
   "prefer-arrow/prefer-arrow-functions",
   "prefer-const",
   "prettier/prettier",
-  "promise/always-return",
-  "promise/catch-or-return",
-  "promise/no-new-statics",
-  "promise/no-return-wrap",
-  "promise/param-names",
   "react-hooks/rules-of-hooks",
   "react/display-name",
   "react/jsx-key",
@@ -250,11 +245,6 @@ exports[`base config > matches error rules snapshot 1`] = `
 
 exports[`base config > matches warning rules snapshot 1`] = `
 [
-  "promise/no-callback-in-promise",
-  "promise/no-nesting",
-  "promise/no-promise-in-callback",
-  "promise/no-return-in-finally",
-  "promise/valid-params",
   "react-hooks/exhaustive-deps",
   "tailwindcss/classnames-order",
   "tailwindcss/enforces-negative-arbitrary-values",
