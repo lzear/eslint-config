@@ -6,7 +6,8 @@
 
 Shareable ESLint config for React projects.
 
-See [docs](https://github.com/lzear/eslint-config/blob/main/react/docs.md) for a list of all rules.
+See [docs](https://github.com/lzear/eslint-config/blob/main/react/docs.md) for a
+list of all rules.
 
 ## Installation
 
