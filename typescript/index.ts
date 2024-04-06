@@ -7,7 +7,6 @@ import { defineFlatConfig } from 'eslint-define-config'
 const configs: FlatESLintConfig[] = [
   // @ts-expect-error ...
   ...baseConfig,
-  // @ts-expect-error https://github.com/typescript-eslint/typescript-eslint/issues/7694
   {
     files: ['**/*.ts', '**/*.tsx'],
 
@@ -18,6 +17,7 @@ const configs: FlatESLintConfig[] = [
         project: ['./tsconfig.json'],
       },
     },
+    // @ts-expect-error ...
     plugins: {
       '@typescript-eslint': eslintTypescript,
     },
