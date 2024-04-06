@@ -58,6 +58,7 @@ const config = defineFlatConfig([
   },
   {
     rules: {
+      'n/no-missing-import': 0, // false positives
       'prefer-const': 2,
       'unicorn/no-abusive-eslint-disable': 0,
       'unicorn/no-null': 0,
