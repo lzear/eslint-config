@@ -1,7 +1,6 @@
 import js from '@eslint/js'
 import { defineFlatConfig, type FlatESLintConfig } from 'eslint-define-config'
-// @ts-expect-error - no types
-import eslintImport from 'eslint-plugin-import'
+// import eslintImport from 'eslint-plugin-import'
 // @ts-expect-error - no types
 import n from 'eslint-plugin-n'
 // @ts-expect-error - no types
@@ -13,7 +12,7 @@ import prettier from 'eslint-plugin-prettier'
 import promise from 'eslint-plugin-promise'
 // @ts-expect-error - no types
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
-import sonarjs from 'eslint-plugin-sonarjs'
+// import sonarjs from 'eslint-plugin-sonarjs'
 // @ts-expect-error - no types
 import unicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
@@ -37,16 +36,16 @@ const configs: FlatESLintConfig[] = [
     plugins: {
       'prefer-arrow': preferArrow,
       'node-import': nodeImport,
-      import: eslintImport,
+      // import: eslintImport,
       promise,
-      sonarjs,
+      // sonarjs,
       unicorn,
       n,
       'simple-import-sort': simpleImportSort,
     },
 
     rules: {
-      ...eslintImport.configs.recommended.rules,
+      // ...eslintImport.configs.recommended.rules,
 
       ...n.configs.recommended.rules,
 
@@ -66,7 +65,7 @@ const configs: FlatESLintConfig[] = [
       'simple-import-sort/imports': 2,
       'simple-import-sort/exports': 2,
 
-      ...sonarjs.configs.recommended.rules,
+      // ...sonarjs.configs.recommended.rules,
 
       ...unicorn.configs.recommended.rules,
     },

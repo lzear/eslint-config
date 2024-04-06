@@ -5,9 +5,7 @@ import type { FlatESLintConfig } from 'eslint-define-config'
 import { defineFlatConfig } from 'eslint-define-config'
 
 const configs: FlatESLintConfig[] = [
-  // @ts-expect-error ...
   ...baseConfig,
-  // @ts-expect-error https://github.com/typescript-eslint/typescript-eslint/issues/7694
   {
     files: ['**/*.ts', '**/*.tsx'],
 
@@ -19,7 +17,8 @@ const configs: FlatESLintConfig[] = [
       },
     },
     plugins: {
-      '@typescript-eslint': eslintTypescript,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      '@typescript-eslint': eslintTypescript as any,
     },
 
     settings: {
