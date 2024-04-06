@@ -16,7 +16,8 @@
     "test:format": "prettier --check \"**/*.{js,ts,json,md,yml}\"",
     "test:js": "eslint **/*.{js,ts}",
     "test:types": "tsc --noEmit --pretty",
-    "test": "yarn test:format && yarn test:js && yarn test:types"
+    "test": "yarn test:format && yarn test:js && yarn test:types",
+    "ncu": "npx npm-check-updates --workspaces --upgrade --root"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
