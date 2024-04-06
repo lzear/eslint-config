@@ -6,7 +6,7 @@ import path from 'node:path'
 export default defineConfig({
   build: {
     lib: {
-      fileName: format => `index.${format === 'es' ? 'mjs' : 'js'}`,
+      fileName: (format) => `index.${format === 'es' ? 'mjs' : 'js'}`,
       entry: path.resolve(__dirname, 'index.ts'),
       formats: ['cjs', 'es'],
     },
