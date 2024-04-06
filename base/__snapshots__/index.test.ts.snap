@@ -78,11 +78,6 @@ exports[`base config > matches error rules snapshot 1`] = `
   "prefer-arrow/prefer-arrow-functions",
   "prefer-const",
   "prettier/prettier",
-  "promise/always-return",
-  "promise/catch-or-return",
-  "promise/no-new-statics",
-  "promise/no-return-wrap",
-  "promise/param-names",
   "require-yield",
   "simple-import-sort/exports",
   "simple-import-sort/imports",
@@ -194,12 +189,4 @@ exports[`base config > matches error rules snapshot 1`] = `
 ]
 `;
 
-exports[`base config > matches warning rules snapshot 1`] = `
-[
-  "promise/no-callback-in-promise",
-  "promise/no-nesting",
-  "promise/no-promise-in-callback",
-  "promise/no-return-in-finally",
-  "promise/valid-params",
-]
-`;
+exports[`base config > matches warning rules snapshot 1`] = `[]`;
