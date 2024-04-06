@@ -14,9 +14,10 @@
     "release:publish": "yarn workspaces foreach publish",
     "release:version": "changelogen --output changelog.md --release --push && prettier --write changelog.md",
     "test:format": "prettier --check \"**/*.{js,ts,json,md,yml}\"",
-    "test:js": "eslint **/*.{js,ts}",
+    "test:lint": "eslint **/*.{js,ts}",
     "test:types": "tsc --noEmit --pretty",
-    "test": "yarn test:format && yarn test:js && yarn test:types",
+    "test:unit": "vitest",
+    "test": "yarn test:lint && yarn test:format && yarn test:types && yarn test:unit",
     "ncu": "npx npm-check-updates --workspaces --upgrade --root"
   },
   "devDependencies": {
@@ -29,7 +30,8 @@
     "eslint-define-config": "^2.1.0",
     "prettier": "^3.2.5",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
   },
   "workspaces": {
     "packages": [

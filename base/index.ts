@@ -1,7 +1,6 @@
 import js from '@eslint/js'
 import { defineFlatConfig, type FlatESLintConfig } from 'eslint-define-config'
 // import eslintImport from 'eslint-plugin-import'
-// @ts-expect-error - no types
 import n from 'eslint-plugin-n'
 // @ts-expect-error - no types
 import nodeImport from 'eslint-plugin-node-import'
@@ -10,7 +9,6 @@ import preferArrow from 'eslint-plugin-prefer-arrow'
 import prettier from 'eslint-plugin-prettier'
 // @ts-expect-error - no types
 import promise from 'eslint-plugin-promise'
-// @ts-expect-error - no types
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 // import sonarjs from 'eslint-plugin-sonarjs'
 // @ts-expect-error - no types
