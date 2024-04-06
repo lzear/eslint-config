@@ -13,7 +13,7 @@ import react from 'eslint-plugin-react'
 // @ts-expect-error - no types
 import tailwindcss from 'eslint-plugin-tailwindcss'
 
-const config = defineFlatConfig([
+const configs: FlatESLintConfig[] = [
   ...typescriptConfig,
 
   {
@@ -66,6 +66,8 @@ const config = defineFlatConfig([
 
     rules: testingLibrary.configs.react.rules,
   },
-]) as unknown as FlatESLintConfig[]
+]
+
+const config = defineFlatConfig(configs)
 
 export default config

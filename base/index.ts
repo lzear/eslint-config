@@ -1,4 +1,4 @@
-import { defineFlatConfig } from 'eslint-define-config'
+import { defineFlatConfig, type FlatESLintConfig } from 'eslint-define-config'
 // @ts-expect-error - no types
 import preferArrow from 'eslint-plugin-prefer-arrow'
 // @ts-expect-error - no types
@@ -16,7 +16,7 @@ import n from 'eslint-plugin-n'
 import globals from 'globals'
 import js from '@eslint/js'
 
-const config = defineFlatConfig([
+const configs: FlatESLintConfig[] = [
   {
     ignores: ['**/node_modules/**', '**/dist/**', '.git/**'],
   },
@@ -76,6 +76,8 @@ const config = defineFlatConfig([
     // @ts-expect-error - no types
     rules: prettier.configs.recommended.rules,
   },
-])
+]
+
+const config = defineFlatConfig(configs)
 
 export default config

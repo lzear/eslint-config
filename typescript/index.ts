@@ -1,11 +1,11 @@
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 
 import eslintTypescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import { defineFlatConfig } from 'eslint-define-config'
 import baseConfig from '@lzear/eslint-config'
 
-const config = defineFlatConfig([
+const configs: FlatESLintConfig[] = [
   // @ts-expect-error ...
   ...baseConfig,
   // @ts-expect-error https://github.com/typescript-eslint/typescript-eslint/issues/7694
@@ -30,7 +30,9 @@ const config = defineFlatConfig([
       },
     },
     rules: eslintTypescript.configs.recommended.rules,
-  } as FlatESLintConfigItem,
-] satisfies FlatESLintConfigItem[])
+  },
+]
+
+const config = defineFlatConfig(configs)
 
 export default config
