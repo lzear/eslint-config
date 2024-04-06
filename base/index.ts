@@ -1,11 +1,17 @@
 import { defineFlatConfig } from 'eslint-define-config'
+// @ts-expect-error - no types
 import preferArrow from 'eslint-plugin-prefer-arrow'
+// @ts-expect-error - no types
 import nodeImport from 'eslint-plugin-node-import'
+// @ts-expect-error - no types
 import eslintImport from 'eslint-plugin-import'
 import prettier from 'eslint-plugin-prettier'
+// @ts-expect-error - no types
 import promise from 'eslint-plugin-promise'
+// @ts-expect-error - no types
 import unicorn from 'eslint-plugin-unicorn'
 import sonarjs from 'eslint-plugin-sonarjs'
+// @ts-expect-error - no types
 import n from 'eslint-plugin-n'
 import globals from 'globals'
 import js from '@eslint/js'
@@ -67,6 +73,7 @@ const config = defineFlatConfig([
   },
   {
     plugins: { prettier },
+    // @ts-expect-error - no types
     rules: prettier.configs.recommended.rules,
   },
 ])

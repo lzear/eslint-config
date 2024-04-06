@@ -1,11 +1,16 @@
 import type { FlatESLintConfig } from 'eslint-define-config'
 
 import typescriptConfig from '@lzear/eslint-config-typescript'
+// @ts-expect-error - no types
 import testingLibrary from 'eslint-plugin-testing-library'
 import { defineFlatConfig } from 'eslint-define-config'
+// @ts-expect-error - no types
 import reactHooks from 'eslint-plugin-react-hooks'
+// @ts-expect-error - no types
 import jsxA11y from 'eslint-plugin-jsx-a11y'
+// @ts-expect-error - no types
 import react from 'eslint-plugin-react'
+// @ts-expect-error - no types
 import tailwindcss from 'eslint-plugin-tailwindcss'
 
 const config = defineFlatConfig([
