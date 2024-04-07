@@ -20,7 +20,6 @@ const configs: FlatESLintConfig[] = [
   {
     ignores: ['**/node_modules/**', '**/dist/**', '.git/**'],
   },
-  js.configs.recommended,
   {
     languageOptions: {
       ecmaVersion: 2023,
@@ -44,6 +43,8 @@ const configs: FlatESLintConfig[] = [
     },
 
     rules: {
+      ...js.configs.recommended.rules,
+
       // ...eslintImport.configs.recommended.rules,
 
       ...n.configs.recommended.rules,
@@ -76,6 +77,27 @@ const configs: FlatESLintConfig[] = [
       'unicorn/no-abusive-eslint-disable': 0,
       'unicorn/no-null': 0,
       'unicorn/prevent-abbreviations': [0, { checkProperties: true }],
+    },
+  },
+
+  {
+    files: [
+      '**/test/*.js',
+      '**/test/*.ts',
+      '**/test/*.jsx',
+      '**/test/*.tsx',
+      '**/*.test.js',
+      '**/*.test.ts',
+      '**/*.test.jsx',
+      '**/*.test.tsx',
+    ],
+
+    languageOptions: {
+      ecmaVersion: 2023,
+      sourceType: 'module',
+      globals: {
+        ...globals.jest,
+      },
     },
   },
   {

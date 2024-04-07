@@ -3,11 +3,18 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
+import configLzear from '@lzear/eslint-config'
+import configReact from '@lzear/eslint-config-react'
 import configTs from '@lzear/eslint-config-typescript'
 import { ESLint } from 'eslint'
 import { describe, expect, it } from 'vitest'
 
-import { rulesDir, testedRules, undocumentedRules } from '../list-rules'
+import {
+  listUsedRules,
+  rulesDir,
+  testedRules,
+  undocumentedRules,
+} from '../list-rules'
 
 const lintFile = async (rule: string, file: string) => {
   const rulePath = path.resolve(rulesDir, rule)
@@ -24,25 +31,41 @@ const lintMessages = async (rule: string, file: string) => {
 }
 
 describe('rules', async () => {
-  const documented = await testedRules()
+  const configs = [
+    { config: configLzear, name: 'js', file: 'index.js' },
+    { config: configTs, name: 'ts', file: 'index.ts' },
+    { config: configReact, name: 'react', file: 'index.tsx' },
+  ]
 
-  for (const rule of documented) {
-    describe(rule, async () => {
-      it('has good.ts and bad.ts', async () => {
-        const rulePath = path.resolve(rulesDir, rule)
-        const files = await fs.promises.readdir(rulePath)
-        expect(files).toStrictEqual(['bad.ts', 'good.ts'])
-      })
+  const tested = await testedRules()
 
-      it('errors with bad.ts', async () => {
-        const thisLintMessages = await lintMessages(rule, 'bad.ts')
-        expect(thisLintMessages).not.toHaveLength(0)
-      })
+  for (const lzearConfig of configs) {
+    if (!tested.includes(lzearConfig.name)) continue
 
-      it('passes with good.ts', async () => {
-        const thisLintMessages = await lintMessages(rule, 'good.ts')
-        expect(thisLintMessages).toHaveLength(0)
-      })
+    describe(lzearConfig.name, async () => {
+      // @ts-expect-error ...
+      const rules = await listUsedRules(lzearConfig.config)
+
+      for (const rule of rules) {
+        describe(rule, async () => {
+          it('has good.ts and bad.ts', async () => {
+            const rulePath = path.resolve(rulesDir, rule)
+            const files = await fs.promises.readdir(rulePath)
+            expect(files).toStrictEqual(['bad.ts', 'good.ts'])
+          })
+
+          it('errors with bad.ts', async () => {
+            const thisLintMessages = await lintMessages(rule, lzearConfig.file)
+
+            expect(thisLintMessages).not.toHaveLength(0)
+          })
+
+          it('passes with good.ts', async () => {
+            const thisLintMessages = await lintMessages(rule, 'good.ts')
+            expect(thisLintMessages).toStrictEqual([])
+          })
+        })
+      }
     })
   }
 

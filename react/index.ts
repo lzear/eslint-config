@@ -15,7 +15,7 @@ import tailwindcss from 'eslint-plugin-tailwindcss'
 import testingLibrary from 'eslint-plugin-testing-library'
 
 const configs: FlatESLintConfig[] = [
-  ...typescriptConfig,
+  ...(typescriptConfig as FlatESLintConfig[]),
 
   {
     files: ['**/*.jsx', '**/*.tsx', '**/*.js', '**/*.ts'],

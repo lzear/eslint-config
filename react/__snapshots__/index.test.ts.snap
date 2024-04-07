@@ -1,9 +1,26 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`base config > matches error rules snapshot 1`] = `
+exports[`react config > matches error rules snapshot 1`] = `
 [
   "@tanstack/query/exhaustive-deps",
   "@tanstack/query/stable-query-client",
+  "@typescript-eslint/ban-ts-comment",
+  "@typescript-eslint/ban-types",
+  "@typescript-eslint/no-array-constructor",
+  "@typescript-eslint/no-duplicate-enum-values",
+  "@typescript-eslint/no-explicit-any",
+  "@typescript-eslint/no-extra-non-null-assertion",
+  "@typescript-eslint/no-loss-of-precision",
+  "@typescript-eslint/no-misused-new",
+  "@typescript-eslint/no-namespace",
+  "@typescript-eslint/no-non-null-asserted-optional-chain",
+  "@typescript-eslint/no-this-alias",
+  "@typescript-eslint/no-unnecessary-type-constraint",
+  "@typescript-eslint/no-unsafe-declaration-merging",
+  "@typescript-eslint/no-unused-vars",
+  "@typescript-eslint/no-var-requires",
+  "@typescript-eslint/prefer-as-const",
+  "@typescript-eslint/triple-slash-reference",
   "constructor-super",
   "for-direction",
   "getter-return",
@@ -80,7 +97,6 @@ exports[`base config > matches error rules snapshot 1`] = `
   "no-import-assign",
   "no-invalid-regexp",
   "no-irregular-whitespace",
-  "no-loss-of-precision",
   "no-misleading-character-class",
   "no-new-native-nonconstructor",
   "no-nonoctal-decimal-escape",
@@ -102,7 +118,6 @@ exports[`base config > matches error rules snapshot 1`] = `
   "no-unsafe-optional-chaining",
   "no-unused-labels",
   "no-unused-private-class-members",
-  "no-unused-vars",
   "no-useless-backreference",
   "no-useless-catch",
   "no-useless-escape",
@@ -245,7 +260,7 @@ exports[`base config > matches error rules snapshot 1`] = `
 ]
 `;
 
-exports[`base config > matches warning rules snapshot 1`] = `
+exports[`react config > matches warning rules snapshot 1`] = `
 [
   "@tanstack/query/no-rest-destructuring",
   "react-hooks/exhaustive-deps",

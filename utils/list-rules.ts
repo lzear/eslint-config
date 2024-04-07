@@ -38,6 +38,11 @@ export const listRules = async (overrideConfig: Linter.Config) => {
   return { warnings, errors }
 }
 
+export const listUsedRules = async (overrideConfig: Linter.Config) => {
+  const { warnings, errors } = await listRules(overrideConfig)
+  return [...warnings, ...errors].sort()
+}
+
 export const rulesDir = path.resolve(import.meta.dirname, '../rules')
 
 export const allRules = async () => {
