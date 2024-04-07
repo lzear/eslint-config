@@ -49,6 +49,7 @@
     "@lzear/eslint-config-typescript": "*"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.1.4",
     "@tanstack/eslint-plugin-query": "^5.28.11",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",

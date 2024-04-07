@@ -2,6 +2,14 @@
 
 exports[`react config > matches error rules snapshot 1`] = `
 [
+  "@next/next/inline-script-id",
+  "@next/next/no-assign-module-variable",
+  "@next/next/no-document-import-in-page",
+  "@next/next/no-duplicate-head",
+  "@next/next/no-head-import-in-document",
+  "@next/next/no-html-link-for-pages",
+  "@next/next/no-script-component-in-head",
+  "@next/next/no-sync-scripts",
   "@tanstack/query/exhaustive-deps",
   "@tanstack/query/stable-query-client",
   "@typescript-eslint/ban-ts-comment",
@@ -262,6 +270,19 @@ exports[`react config > matches error rules snapshot 1`] = `
 
 exports[`react config > matches warning rules snapshot 1`] = `
 [
+  "@next/next/google-font-display",
+  "@next/next/google-font-preconnect",
+  "@next/next/next-script-for-ga",
+  "@next/next/no-async-client-component",
+  "@next/next/no-before-interactive-script-outside-document",
+  "@next/next/no-css-tags",
+  "@next/next/no-head-element",
+  "@next/next/no-img-element",
+  "@next/next/no-page-custom-font",
+  "@next/next/no-styled-jsx-in-document",
+  "@next/next/no-title-in-document-head",
+  "@next/next/no-typos",
+  "@next/next/no-unwanted-polyfillio",
   "@tanstack/query/no-rest-destructuring",
   "react-hooks/exhaustive-deps",
   "tailwindcss/classnames-order",

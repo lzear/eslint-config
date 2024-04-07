@@ -1,4 +1,6 @@
 import typescriptConfig from '@lzear/eslint-config-typescript'
+// @ts-expect-error - no types
+import next from '@next/eslint-plugin-next'
 import * as tanstackQuery from '@tanstack/eslint-plugin-query'
 import { ESLint } from 'eslint'
 import type { FlatESLintConfig } from 'eslint-define-config'
@@ -34,6 +36,7 @@ const configs: FlatESLintConfig[] = [
       react,
       tailwindcss,
       '@tanstack/query': tanstackQuery as unknown as ESLint.Plugin,
+      '@next/next': next,
     },
 
     rules: {
@@ -46,6 +49,9 @@ const configs: FlatESLintConfig[] = [
       ...tailwindcss.configs.recommended.rules,
 
       ...tanstackQuery.configs.recommended.rules,
+
+      ...next.configs.recommended.rules,
+      ...next.configs['core-web-vitals'].rules,
     },
 
     settings: {
