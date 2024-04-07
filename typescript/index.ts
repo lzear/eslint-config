@@ -1,9 +1,8 @@
-import type { FlatESLintConfig } from 'eslint-define-config'
-
+import baseConfig from '@lzear/eslint-config'
 import eslintTypescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
+import type { FlatESLintConfig } from 'eslint-define-config'
 import { defineFlatConfig } from 'eslint-define-config'
-import baseConfig from '@lzear/eslint-config'
 
 const configs: FlatESLintConfig[] = [
   // @ts-expect-error ...
