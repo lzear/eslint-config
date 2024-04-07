@@ -1,7 +1,8 @@
 /* eslint-disable unicorn/prefer-module */
+import path from 'node:path'
+
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
-import path from 'node:path'
 
 export default defineConfig({
   build: {
