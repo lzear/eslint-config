@@ -2,6 +2,9 @@
 
 exports[`rules > has undocumented rules 1`] = `
 [
+  "@tanstack/query/exhaustive-deps",
+  "@tanstack/query/no-rest-destructuring",
+  "@tanstack/query/stable-query-client",
   "for-direction",
   "getter-return",
   "jsx-a11y/alt-text",

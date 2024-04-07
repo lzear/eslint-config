@@ -1,4 +1,6 @@
 import typescriptConfig from '@lzear/eslint-config-typescript'
+import * as tanstackQuery from '@tanstack/eslint-plugin-query'
+import { ESLint } from 'eslint'
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { defineFlatConfig } from 'eslint-define-config'
 // @ts-expect-error - no types
@@ -31,13 +33,19 @@ const configs: FlatESLintConfig[] = [
       'jsx-a11y': jsxA11y,
       react,
       tailwindcss,
+      '@tanstack/query': tanstackQuery as unknown as ESLint.Plugin,
     },
 
     rules: {
       ...react.configs.recommended.rules,
+
       ...reactHooks.configs.recommended.rules,
+
       ...jsxA11y.configs.recommended.rules,
+
       ...tailwindcss.configs.recommended.rules,
+
+      ...tanstackQuery.configs.recommended.rules,
     },
 
     settings: {

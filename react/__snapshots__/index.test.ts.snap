@@ -2,6 +2,8 @@
 
 exports[`base config > matches error rules snapshot 1`] = `
 [
+  "@tanstack/query/exhaustive-deps",
+  "@tanstack/query/stable-query-client",
   "constructor-super",
   "for-direction",
   "getter-return",
@@ -245,6 +247,7 @@ exports[`base config > matches error rules snapshot 1`] = `
 
 exports[`base config > matches warning rules snapshot 1`] = `
 [
+  "@tanstack/query/no-rest-destructuring",
   "react-hooks/exhaustive-deps",
   "tailwindcss/classnames-order",
   "tailwindcss/enforces-negative-arbitrary-values",
