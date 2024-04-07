@@ -1,0 +1,93 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`documentRule > documents all rules 1`] = `
+[
+  {
+    "bad": "// @ts-nocheck
+
+class A extends B {
+  constructor() {} // Would throw a ReferenceError.
+}
+
+// Classes which inherits from a non constructor are always problems.
+class C extends null {
+  constructor() {
+    super() // Would throw a TypeError.
+  }
+}
+
+class D extends null {
+  constructor() {} // Would throw a ReferenceError.
+}
+",
+    "good": "// @ts-nocheck
+
+class A {
+  constructor() {}
+}
+
+class B extends C {
+  constructor() {
+    super()
+  }
+}
+",
+    "meta": {
+      "docs": {
+        "description": "Require \`super()\` calls in constructors",
+        "recommended": true,
+        "url": "https://eslint.org/docs/latest/rules/constructor-super",
+      },
+      "messages": {
+        "badSuper": "Unexpected 'super()' because 'super' is not a constructor.",
+        "duplicate": "Unexpected duplicate 'super()'.",
+        "missingAll": "Expected to call 'super()'.",
+        "missingSome": "Lacked a call of 'super()' in some code paths.",
+      },
+      "schema": [],
+      "type": "problem",
+    },
+  },
+  {
+    "bad": "const a = /[0-9]/
+const b = /[^0-9]/
+const c = /[a-zA-Z0-9_]/
+const d = /[a-z0-9_]/i
+const e = /[^a-zA-Z0-9_]/
+const f = /[^a-z0-9_]/i
+const g = /[0-9]\\.[a-zA-Z0-9_]\\-[^0-9]/i
+",
+    "good": "const a = /\\d/
+const b = /\\D/
+const c = /\\w/
+const d = /\\w/i
+const e = /\\W/
+const f = /\\W/i
+const g = /\\d\\.\\w-\\D/i
+",
+    "meta": {
+      "docs": {
+        "description": "Improve regexes by making them shorter, consistent, and safer.",
+      },
+      "fixable": "code",
+      "messages": {
+        "better-regex": "{{original}} can be optimized to {{optimized}}.",
+        "better-regex/parse-error": "Problem parsing {{original}}: {{error}}",
+      },
+      "schema": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "sortCharacterClasses": {
+              "default": true,
+              "type": "boolean",
+            },
+          },
+          "type": "object",
+        },
+      ],
+      "type": "suggestion",
+    },
+  },
+]
+`;
