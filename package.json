@@ -1,7 +1,7 @@
 {
   "name": "@lzear/eslint-config-monorepo",
   "description": "ESLint shareable config",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "module",
   "private": true,
   "repository": "lzear/eslint-config",
