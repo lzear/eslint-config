@@ -1059,56 +1059,7 @@ export const core = (config: ConfigOptions): Linter.Config => {
           singleReturnOnly: false,
         },
       ],
-
-      /**
-       * Enforce the use of `catch()` on un-returned promises.
-       */
-      'promise/catch-or-return': 'error',
-      /**
-       * Disallow calling `cb()` inside of a `then()`.
-       */
-      'promise/no-callback-in-promise': 'error',
-      /**
-       * Disallow to create new promises with paths that resolve multiple times.
-       */
-      'promise/no-multiple-resolved': 'error',
-      /**
-       * Disallow nested then() or catch() statements.
-       */
-      'promise/no-nesting': 'error',
-      /**
-       * Disallow calling `new` on a Promise static method.
-       */
-      'promise/no-new-statics': 'error',
-      /**
-       * Disallow to use promises inside of callbacks.
-       */
-      'promise/no-promise-in-callback': 'error',
-      /**
-       * Disallow return statements in `finally()`.
-       */
-      'promise/no-return-in-finally': 'error',
-      /**
-       * Disallow wrapping values in `Promise.resolve` or `Promise.reject` when
-       * not needed.
-       */
-      'promise/no-return-wrap': 'error',
-      /**
-       * Enforce consistent param names and ordering when creating new promises.
-       */
-      'promise/param-names': 'error',
-      /**
-       * Prefer `catch` to `then(a, b)`/`then(null, b)` for handling errors.
-       */
-      'promise/prefer-catch': 'error',
-      /**
-       * Disallow use of non-standard Promise static methods.
-       */
-      'promise/spec-only': 'error',
-      /**
-       * Check number of arguments are passed to Promise functions.
-       */
-      'promise/valid-params': 'error',
+      ...promisePlugin.configs.recommended.rules,
       ...regexpPlugin.configs.recommended.rules,
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       ...(sonarjsPlugin.configs.recommended.rules as Linter.RulesRecord),

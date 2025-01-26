@@ -20,18 +20,18 @@ declare module 'eslint-plugin-prefer-arrow' {
 }
 
 declare module 'eslint-plugin-promise' {
-  import type { ESLint } from 'eslint'
+  import type { ESLint, Linter } from 'eslint'
 
   let plugin: ESLint.Plugin
-  export = plugin
+  let configs: { recommended: { rules: Linter.RulesRecord } }
+  export = { ...plugin, configs }
 }
 
 declare module 'eslint-plugin-react-compiler' {
   import type { ESLint } from 'eslint'
 
   let plugin: ESLint.Plugin
-  let configs: { recommended: { rules: Linter.RulesRecord } }
-  export = { ...plugin, configs }
+  export = plugin
 }
 
 declare module 'eslint-plugin-react-hooks' {
