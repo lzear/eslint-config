@@ -95,10 +95,6 @@ export let perfectionist = async (
        */
       'perfectionist/sort-maps': ['error'],
       /**
-       * Enforce sorted module members.
-       */
-      'perfectionist/sort-modules': ['error'],
-      /**
        * Enforce sorted named exports.
        */
       'perfectionist/sort-named-exports': ['error'],
