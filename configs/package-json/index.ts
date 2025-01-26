@@ -9,8 +9,7 @@
   ]
 */
 
-import type { ESLint } from 'eslint'
-import type { Linter } from 'eslint'
+import type { ESLint, Linter } from 'eslint'
 
 import * as packageJsonPlugin from 'eslint-plugin-package-json'
 import jsoncParser from 'jsonc-eslint-parser'
