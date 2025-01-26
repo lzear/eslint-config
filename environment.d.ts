@@ -82,20 +82,6 @@ declare module 'eslint-plugin-react-perf' {
   export = plugin
 }
 
-declare module 'eslint-plugin-qwik' {
-  import type { ESLint } from 'eslint'
-
-  let plugin: ESLint.Plugin
-  export = plugin
-}
-
-declare module 'eslint-plugin-svelte' {
-  import type { ESLint } from 'eslint'
-
-  let plugin: ESLint.Plugin
-  export = plugin
-}
-
 declare module 'typescript-eslint' {
   import type { ESLint } from 'eslint'
 

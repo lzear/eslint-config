@@ -28,24 +28,12 @@ export let node = async (config: ConfigOptions): Promise<Linter.Config> => {
     files.push('**/*.ts', '**/*.cts', '**/*.mts')
   }
 
-  if (config.react || config.qwik) {
+  if (config.react) {
     files.push('**/*.jsx')
 
     if (config.typescript) {
       files.push('**/*.tsx')
     }
-  }
-
-  if (config.astro) {
-    files.push('**/*.astro')
-  }
-
-  if (config.svelte) {
-    files.push('**/*.svelte')
-  }
-
-  if (config.vue) {
-    files.push('**/*.vue')
   }
 
   return {

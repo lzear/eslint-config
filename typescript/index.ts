@@ -27,20 +27,8 @@ export let typescript = async (
 
   let files = ['**/*.ts', '**/*.cts', '**/*.mts']
 
-  if (config.react || config.qwik) {
+  if (config.react) {
     files.push('**/*.tsx')
-  }
-
-  if (config.astro) {
-    files.push('**/*.astro')
-  }
-
-  if (config.svelte) {
-    files.push('**/*.svelte')
-  }
-
-  if (config.vue) {
-    files.push('**/*.vue')
   }
 
   return {
@@ -52,7 +40,7 @@ export let typescript = async (
       parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: config.react || config.qwik,
+          jsx: config.react,
         },
         ecmaVersion: 'latest',
         projectService: true,
@@ -123,8 +111,7 @@ export let typescript = async (
       'typescript/explicit-function-return-type': [
         'error',
         {
-          // https://github.com/withastro/compiler/issues/554
-          allowedNames: config.astro ? ['getStaticPaths'] : [],
+          allowedNames: [],
           allowExpressions: true,
           allowHigherOrderFunctions: true,
           allowIIFEs: true,
@@ -142,8 +129,7 @@ export let typescript = async (
       'typescript/explicit-module-boundary-types': [
         'error',
         {
-          // https://github.com/withastro/compiler/issues/554
-          allowedNames: config.astro ? ['getStaticPaths'] : [],
+          allowedNames: [],
         },
       ],
       /**
@@ -341,9 +327,7 @@ export let typescript = async (
       /**
        * Disallow assigning a value with type `any` to variables and properties.
        */
-      'typescript/no-unsafe-assignment':
-        // https://github.com/ota-meshi/eslint-plugin-astro/issues/341
-        config.astro ? 'off' : 'error',
+      'typescript/no-unsafe-assignment': 'error',
       /**
        * Disallow calling a value with type `any`.
        */
@@ -508,7 +492,7 @@ export let typescript = async (
        * Disallow certain triple slash directives in favor of ES6-style import
        * declarations.
        */
-      'typescript/triple-slash-reference': config.astro ? 'off' : 'error',
+      'typescript/triple-slash-reference': 'error',
       /**
        * Disallow two overloads that could be unified into one with a union or
        * an optional/rest parameter.

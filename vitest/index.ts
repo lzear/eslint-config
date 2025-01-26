@@ -42,7 +42,7 @@ export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
     )
   }
 
-  if (config.react || config.qwik) {
+  if (config.react) {
     files.push('**/test/*.jsx', '**/*.test.jsx')
 
     if (config.typescript) {

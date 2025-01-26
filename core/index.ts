@@ -31,24 +31,12 @@ export let core = (config: ConfigOptions): Linter.Config => {
     files.push('**/*.ts', '**/*.cts', '**/*.mts')
   }
 
-  if (config.react || config.qwik) {
+  if (config.react) {
     files.push('**/*.jsx')
 
     if (config.typescript) {
       files.push('**/*.tsx')
     }
-  }
-
-  if (config.astro) {
-    files.push('**/*.astro')
-  }
-
-  if (config.svelte) {
-    files.push('**/*.svelte')
-  }
-
-  if (config.vue) {
-    files.push('**/*.vue')
   }
 
   return {
@@ -625,8 +613,7 @@ export let core = (config: ConfigOptions): Linter.Config => {
       /**
        * Disallow variable assignments when the value is not used.
        */
-      'no-useless-assignment':
-        config.astro || config.react || config.qwik ? 'off' : 'error',
+      'no-useless-assignment': config.react ? 'off' : 'error',
       /**
        * Disallow useless backreferences in regular expressions.
        */
@@ -1913,13 +1900,10 @@ export let core = (config: ConfigOptions): Linter.Config => {
         {
           allowList: {
             attrs: true,
-            env: config.astro,
             i: true,
             Props: true,
             props: true,
-            rel: (['astro', 'react', 'svelte', 'vue'] as const).some(
-              configName => config[configName],
-            ),
+            rel: (['react'] as const).some(configName => config[configName]),
           },
         },
       ],
