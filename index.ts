@@ -27,7 +27,7 @@ type ConfigOptionFlags = Record<ConfigOptionKeys, boolean>
 
 type ConfigOptionKeys = (typeof CONFIG_OPTIONS)[number]
 
-export default async ({
+let configGenerator = async ({
   extends: customExtends = {} as Linter.Config,
   ...rawConfig
 }: RawConfigOptions = {}): Promise<Linter.Config[]> => {
@@ -86,4 +86,14 @@ export default async ({
           },
         ]),
   ]
+}
+
+export default configGenerator
+
+export let defaultOptions = {
+  perfectionist: true,
+  typescript: true,
+  vitest: true,
+  react: true,
+  node: true,
 }

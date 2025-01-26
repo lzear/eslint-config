@@ -1,11 +1,5 @@
 import type { Linter } from 'eslint'
 
-import eslintConfig from '.'
+import eslintConfig, { defaultOptions } from '.'
 
-export default eslintConfig({
-  perfectionist: true,
-  typescript: true,
-  vitest: true,
-  react: true,
-  node: true,
-}) satisfies Promise<Linter.Config[]>
+export default eslintConfig(defaultOptions) satisfies Promise<Linter.Config[]>
