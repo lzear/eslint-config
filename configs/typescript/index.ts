@@ -10,6 +10,7 @@
 */
 
 import type { Linter } from 'eslint'
+import type { ESLint } from 'eslint'
 
 import type { ConfigOptions } from '../..'
 
@@ -37,7 +38,7 @@ export let typescript = async (
     files,
 
     languageOptions: {
-      parser: typescriptParser,
+      parser: typescriptParser as unknown as Linter.Parser,
       parserOptions: {
         ecmaFeatures: {
           jsx: config.react,
@@ -50,7 +51,7 @@ export let typescript = async (
     },
 
     plugins: {
-      typescript: typescriptPlugin,
+      typescript: typescriptPlugin as unknown as ESLint.Plugin,
     },
 
     rules: {

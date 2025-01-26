@@ -9,6 +9,7 @@
   ]
 */
 
+import type { ESLint } from 'eslint'
 import type { Linter } from 'eslint'
 
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
@@ -58,7 +59,7 @@ export let core = (config: ConfigOptions): Linter.Config => {
 
     plugins: {
       'eslint-comments': eslintCommentsPlugin,
-      'import-x': importXPlugin,
+      'import-x': importXPlugin as unknown as ESLint.Plugin,
       jsdoc: jsdocPlugin,
       'prefer-arrow': preferArrowPlugin,
       'prefer-let': preferLetPlugin,

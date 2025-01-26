@@ -9,6 +9,7 @@
   ]
 */
 
+import type { ESLint } from 'eslint'
 import type { Linter } from 'eslint'
 
 import packageJsonPlugin from 'eslint-plugin-package-json'
@@ -22,7 +23,7 @@ export let packageJson = (_config: ConfigOptions): Linter.Config => ({
   files: ['**/package.json'],
 
   plugins: {
-    'package-json': packageJsonPlugin,
+    'package-json': packageJsonPlugin as ESLint.Plugin,
   },
 
   languageOptions: {
