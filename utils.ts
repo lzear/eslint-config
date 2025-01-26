@@ -7,7 +7,7 @@ export const interopDefault = async <T>(
   try {
     const resolved = await module
 
-    if (typeof resolved === 'object' && resolved !== null) {
+    if (typeof resolved === 'object' && resolved) {
       if ('default' in resolved && Object.keys(resolved).length === 1) {
         const defaultExport = (resolved as { default: unknown }).default as T
 
