@@ -76,7 +76,7 @@ let configGenerator = async ({
       ],
       name: 'lzear/core/ignores',
     },
-    ...configs,
+    ...configs.flat(),
     ...(Array.isArray(customExtends)
       ? customExtends
       : [
