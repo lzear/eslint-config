@@ -17,26 +17,26 @@ const CONFIG_OPTIONS = [
   'node',
 ] as const
 
+type ConfigOptionKeys = (typeof CONFIG_OPTIONS)[number]
+
+type ConfigOptionFlags = Record<ConfigOptionKeys, boolean>
+
 export type ConfigOptions = Required<ConfigOptionFlags>
 
 type RawConfigOptions = {
   extends?: Linter.Config[] | Linter.Config
 } & Partial<ConfigOptionFlags>
 
-type ConfigOptionFlags = Record<ConfigOptionKeys, boolean>
-
-type ConfigOptionKeys = (typeof CONFIG_OPTIONS)[number]
-
-let configGenerator = async ({
+const configGenerator = async ({
   extends: customExtends = {} as Linter.Config,
   ...rawConfig
 }: RawConfigOptions = {}): Promise<Linter.Config[]> => {
-  let config: Required<ConfigOptionFlags> = {} as Required<ConfigOptionFlags>
-  for (let configName of CONFIG_OPTIONS) {
+  const config: Required<ConfigOptionFlags> = {} as Required<ConfigOptionFlags>
+  for (const configName of CONFIG_OPTIONS) {
     config[configName] = rawConfig[configName] ?? false
   }
 
-  let configFunctions = [
+  const configFunctions = [
     core,
     a11y,
     react,
@@ -47,7 +47,7 @@ let configGenerator = async ({
     perfectionist,
   ]
 
-  let configs = await Promise.all(
+  const configs = await Promise.all(
     configFunctions.map(createConfigFunction => createConfigFunction(config)),
   )
 
@@ -90,7 +90,7 @@ let configGenerator = async ({
 
 export default configGenerator
 
-export let defaultOptions = {
+export const defaultOptions = {
   perfectionist: true,
   typescript: true,
   vitest: true,

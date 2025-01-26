@@ -15,12 +15,12 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 
 import type { ConfigOptions } from '../..'
 
-export let a11y = (config: ConfigOptions): Linter.Config => {
+export const a11y = (config: ConfigOptions): Linter.Config => {
   if (!config.react) {
     return {}
   }
 
-  let files = ['**/*.jsx']
+  const files = ['**/*.jsx']
 
   if (config.typescript) {
     files.push('**/*.tsx')

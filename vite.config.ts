@@ -4,10 +4,10 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import path from 'node:path'
 
-let removeCommentsPlugin = (): Plugin => ({
+const removeCommentsPlugin = (): Plugin => ({
   generateBundle: (_options, bundle): void => {
-    let chunks = Object.values(bundle).filter(chunk => chunk.type === 'chunk')
-    for (let chunk of chunks) {
+    const chunks = Object.values(bundle).filter(chunk => chunk.type === 'chunk')
+    for (const chunk of chunks) {
       chunk.code = chunk.code
         .replaceAll(/^[\t ]*\/\*[\s\S]*?\*\/\s*$|^[\t ]*\/\/.*$/gmu, '')
         .replaceAll(/^[\t ]*[\n\r]/gmu, '')

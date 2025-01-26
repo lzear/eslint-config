@@ -15,14 +15,14 @@ import type { ConfigOptions } from '../..'
 
 import { interopDefault } from '../../utils'
 
-export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
+export const vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.vitest) {
     return {}
   }
 
-  let vitestPlugin = await interopDefault(import('@vitest/eslint-plugin'))
+  const vitestPlugin = await interopDefault(import('@vitest/eslint-plugin'))
 
-  let files = [
+  const files = [
     '**/test/*.js',
     '**/test/*.cjs',
     '**/test/*.mjs',

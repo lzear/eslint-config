@@ -15,14 +15,14 @@ import type { ConfigOptions } from '../..'
 
 import { interopDefault } from '../../utils'
 
-export let node = async (config: ConfigOptions): Promise<Linter.Config> => {
+export const node = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.node) {
     return {}
   }
 
-  let nodePlugin = await interopDefault(import('eslint-plugin-n'))
+  const nodePlugin = await interopDefault(import('eslint-plugin-n'))
 
-  let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
+  const files = ['**/*.js', '**/*.cjs', '**/*.mjs']
 
   if (config.typescript) {
     files.push('**/*.ts', '**/*.cts', '**/*.mts')

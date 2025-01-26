@@ -24,8 +24,8 @@ import globals from 'globals'
 
 import type { ConfigOptions } from '../..'
 
-export let core = (config: ConfigOptions): Linter.Config => {
-  let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
+export const core = (config: ConfigOptions): Linter.Config => {
+  const files = ['**/*.js', '**/*.cjs', '**/*.mjs']
 
   if (config.typescript) {
     files.push('**/*.ts', '**/*.cts', '**/*.mts')

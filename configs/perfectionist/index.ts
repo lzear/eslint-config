@@ -15,18 +15,18 @@ import type { ConfigOptions } from '../..'
 
 import { interopDefault } from '../../utils'
 
-export let perfectionist = async (
+export const perfectionist = async (
   config: ConfigOptions,
 ): Promise<Linter.Config> => {
   if (!config.perfectionist) {
     return {}
   }
 
-  let perfectionistPlugin = await interopDefault(
+  const perfectionistPlugin = await interopDefault(
     import('eslint-plugin-perfectionist'),
   )
 
-  let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
+  const files = ['**/*.js', '**/*.cjs', '**/*.mjs']
 
   if (config.typescript) {
     files.push('**/*.ts', '**/*.cts', '**/*.mts')

@@ -15,12 +15,12 @@ import type { ConfigOptions } from '../..'
 
 import { interopDefault } from '../../utils'
 
-export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
+export const react = async (config: ConfigOptions): Promise<Linter.Config> => {
   if (!config.react) {
     return {}
   }
 
-  let [reactCompilerPlugin, reactHooksPlugin, reactPerfPlugin, reactPlugin] =
+  const [reactCompilerPlugin, reactHooksPlugin, reactPerfPlugin, reactPlugin] =
     await Promise.all([
       interopDefault(import('eslint-plugin-react-compiler')),
       interopDefault(import('eslint-plugin-react-hooks')),
@@ -28,7 +28,7 @@ export let react = async (config: ConfigOptions): Promise<Linter.Config> => {
       interopDefault(import('eslint-plugin-react')),
     ] as const)
 
-  let files = ['**/*.jsx']
+  const files = ['**/*.jsx']
 
   if (config.typescript) {
     files.push('**/*.tsx')

@@ -1,27 +1,27 @@
 // Returns T['default'] if module has default export or T it doesn't contain default export
 type ReturnDefault<T> = 'default' extends keyof T ? T['default'] : T
 
-export let interopDefault = async <T>(
+export const interopDefault = async <T>(
   module: Promise<T> | T,
 ): Promise<ReturnDefault<T>> => {
   try {
-    let resolved = await module
+    const resolved = await module
 
     if (typeof resolved === 'object' && resolved !== null) {
       if ('default' in resolved && Object.keys(resolved).length === 1) {
-        let defaultExport = (resolved as { default: unknown }).default as T
+        const defaultExport = (resolved as { default: unknown }).default as T
 
         if (!defaultExport) {
-          // @ts-ignore
+          // @ts-expect-error - couldn't get the types right
           return defaultExport
         }
-        // @ts-ignore
+        // @ts-expect-error - couldn't get the types right
         return defaultExport
       }
-      // @ts-ignore
+      // @ts-expect-error - couldn't get the types right
       return resolved
     }
-    // @ts-ignore
+    // @ts-expect-error - couldn't get the types right
     return resolved
   } catch (error) {
     throw new Error(`Cannot import module: ${String(error)}`)
