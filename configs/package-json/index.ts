@@ -12,7 +12,7 @@
 import type { ESLint } from 'eslint'
 import type { Linter } from 'eslint'
 
-import packageJsonPlugin from 'eslint-plugin-package-json'
+import * as packageJsonPlugin from 'eslint-plugin-package-json'
 import jsoncParser from 'jsonc-eslint-parser'
 
 export const packageJson = (): Linter.Config => ({
@@ -28,55 +28,5 @@ export const packageJson = (): Linter.Config => ({
     parser: jsoncParser,
   },
 
-  rules: {
-    /**
-     * Checks that the `files` property of a `package.json` doesn't contain any
-     * redundant or unnecessary file entries.
-     */
-    'package-json/no-redundant-files': 'error',
-    /**
-     * Enforce the package.json ordering convention.
-     */
-    'package-json/order-properties': [
-      'error',
-      {
-        order: 'sort-package-json',
-      },
-    ],
-    /**
-     * Enforces that `repository` entries in a package.json use shorthand
-     * notation.
-     */
-    'package-json/repository-shorthand': [
-      'error',
-      {
-        form: 'shorthand',
-      },
-    ],
-    /**
-     * Enforce a consistent order of dependencies in package.json.
-     */
-    'package-json/sort-collections': 'error',
-    /**
-     * Disallow duplicates in dependencies.
-     */
-    'package-json/unique-dependencies': 'error',
-    /**
-     * Validate the path for `file:` and `link:` dependencies in a
-     * `package.json`.
-     */
-    'package-json/valid-local-dependency': 'error',
-    /**
-     * Validate the `name` property.
-     */
-    'package-json/valid-name': 'error',
-    /**
-     * Validate required properties in a `package.json`.
-     */
-    'package-json/valid-package-definition': 'error',
-    /**
-     * Validate the `version` property.
-     */
-    'package-json/valid-version': 'error',
-  },
+  rules: packageJsonPlugin.configs.recommended.rules,
 })

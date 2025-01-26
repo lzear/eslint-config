@@ -11,7 +11,10 @@
     "javascript",
     "typescript"
   ],
-  "repository": "lzear/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzear/eslint-config.git"
+  },
   "license": "MIT",
   "author": "lzear",
   "type": "module",
