@@ -14,7 +14,7 @@ import type { Linter } from 'eslint'
 import packageJsonPlugin from 'eslint-plugin-package-json'
 import jsoncParser from 'jsonc-eslint-parser'
 
-import type { ConfigOptions } from '..'
+import type { ConfigOptions } from '../..'
 
 export let packageJson = (_config: ConfigOptions): Linter.Config => ({
   name: 'lzear/package-json',

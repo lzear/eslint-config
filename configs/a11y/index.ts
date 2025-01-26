@@ -13,7 +13,7 @@ import type { Linter } from 'eslint'
 
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 
-import type { ConfigOptions } from '..'
+import type { ConfigOptions } from '../..'
 
 export let a11y = (config: ConfigOptions): Linter.Config => {
   if (!config.react) {

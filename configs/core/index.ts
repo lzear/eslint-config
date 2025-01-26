@@ -22,7 +22,7 @@ import regexpPlugin from 'eslint-plugin-regexp'
 import jsdocPlugin from 'eslint-plugin-jsdoc'
 import globals from 'globals'
 
-import type { ConfigOptions } from '..'
+import type { ConfigOptions } from '../..'
 
 export let core = (config: ConfigOptions): Linter.Config => {
   let files = ['**/*.js', '**/*.cjs', '**/*.mjs']
