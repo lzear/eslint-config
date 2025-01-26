@@ -14116,22 +14116,6 @@
           ],
         },
       },
-      "prefer-let": {
-        "rules": {
-          "prefer-let": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Stylistic Issues",
-                "description": "Use `let` declarations to bind names to values",
-                "recommended": false,
-              },
-              "fixable": "code",
-              "schema": [],
-            },
-          },
-        },
-      },
       "promise": {
         "configs": {
           "flat/recommended": {
@@ -39669,7 +39653,6 @@
       ],
       "prefer-destructuring": "error",
       "prefer-exponentiation-operator": "error",
-      "prefer-let/prefer-let": "error",
       "prefer-named-capture-group": "error",
       "prefer-numeric-literals": "error",
       "prefer-object-has-own": "error",

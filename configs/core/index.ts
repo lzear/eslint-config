@@ -14,7 +14,6 @@ import type { Linter } from 'eslint'
 
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
 import preferArrowPlugin from 'eslint-plugin-prefer-arrow'
-import preferLetPlugin from 'eslint-plugin-prefer-let'
 import importXPlugin from 'eslint-plugin-import-x'
 import promisePlugin from 'eslint-plugin-promise'
 import sonarjsPlugin from 'eslint-plugin-sonarjs'
@@ -62,7 +61,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
       'import-x': importXPlugin as unknown as ESLint.Plugin,
       jsdoc: jsdocPlugin,
       'prefer-arrow': preferArrowPlugin,
-      'prefer-let': preferLetPlugin,
       promise: promisePlugin,
       regexp: regexpPlugin,
       sonarjs: sonarjsPlugin,
@@ -1061,11 +1059,6 @@ export let core = (config: ConfigOptions): Linter.Config => {
           singleReturnOnly: false,
         },
       ],
-
-      /**
-       * Encourage semantic of usage of `let` and `const`.
-       */
-      'prefer-let/prefer-let': 'error',
 
       /**
        * Enforce the use of `catch()` on un-returned promises.
