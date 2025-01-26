@@ -1,13 +1,12 @@
 import type { Linter } from 'eslint'
-
-import { perfectionist } from './configs/perfectionist'
-import { packageJson } from './configs/package-json'
-import { typescript } from './configs/typescript'
-import { vitest } from './configs/vitest'
-import { react } from './configs/react'
 import { a11y } from './configs/a11y'
 import { core } from './configs/core'
 import { node } from './configs/node'
+import { packageJson } from './configs/package-json'
+import { perfectionist } from './configs/perfectionist'
+import { react } from './configs/react'
+import { typescript } from './configs/typescript'
+import { vitest } from './configs/vitest'
 
 const CONFIG_OPTIONS = [
   'perfectionist',

@@ -1,8 +1,7 @@
+import path from 'node:path'
 import type { Plugin } from 'vite'
-
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
-import path from 'node:path'
 
 const removeCommentsPlugin = (): Plugin => ({
   generateBundle: (_options, bundle): void => {

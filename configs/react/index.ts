@@ -10,9 +10,7 @@
 */
 
 import type { Linter } from 'eslint'
-
 import type { ConfigOptions } from '../..'
-
 import { interopDefault } from '../../utils'
 
 export const react = async (config: ConfigOptions): Promise<Linter.Config> => {

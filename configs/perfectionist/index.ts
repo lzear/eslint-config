@@ -10,9 +10,7 @@
 */
 
 import type { Linter } from 'eslint'
-
 import type { ConfigOptions } from '../..'
-
 import { interopDefault } from '../../utils'
 
 export const perfectionist = async (
@@ -74,10 +72,6 @@ export const perfectionist = async (
        * Enforce sorted heritage clauses.
        */
       'perfectionist/sort-heritage-clauses': ['error'],
-      /**
-       * Enforce sorted imports.
-       */
-      'perfectionist/sort-imports': ['error'],
       /**
        * Enforce sorted interface properties.
        */

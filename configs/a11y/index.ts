@@ -10,9 +10,7 @@
 */
 
 import type { Linter } from 'eslint'
-
 import jsxA11y from 'eslint-plugin-jsx-a11y'
-
 import type { ConfigOptions } from '../..'
 
 export const a11y = (config: ConfigOptions): Linter.Config => {

@@ -9,13 +9,10 @@
   ]
 */
 
-import type { Linter } from 'eslint'
-
-import tseslint from 'typescript-eslint'
 import eslint from '@eslint/js'
-
+import type { Linter } from 'eslint'
+import tseslint from 'typescript-eslint'
 import type { ConfigOptions } from '../..'
-
 import { interopDefault } from '../../utils'
 
 export const typescript = async (

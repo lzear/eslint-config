@@ -9,19 +9,17 @@
   ]
 */
 
-import type { ESLint, Linter } from 'eslint'
-
+import js from '@eslint/js'
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
-import preferArrowPlugin from 'eslint-plugin-prefer-arrow'
+import type { ESLint, Linter } from 'eslint'
 import importXPlugin from 'eslint-plugin-import-x'
+import jsdocPlugin from 'eslint-plugin-jsdoc'
+import preferArrowPlugin from 'eslint-plugin-prefer-arrow'
 import promisePlugin from 'eslint-plugin-promise'
+import regexpPlugin from 'eslint-plugin-regexp'
 import sonarjsPlugin from 'eslint-plugin-sonarjs'
 import unicornPlugin from 'eslint-plugin-unicorn'
-import regexpPlugin from 'eslint-plugin-regexp'
-import jsdocPlugin from 'eslint-plugin-jsdoc'
 import globals from 'globals'
-import js from '@eslint/js'
-
 import type { ConfigOptions } from '../..'
 
 export const core = (config: ConfigOptions): Linter.Config => {
@@ -72,6 +70,16 @@ export const core = (config: ConfigOptions): Linter.Config => {
       ...eslintCommentsPlugin.configs.recommended.rules,
       ...importXPlugin.configs.recommended.rules,
       'import-x/no-unresolved': 0,
+      'import-x/order': [
+        2,
+        {
+          alphabetize: {
+            order: 'asc',
+            orderImportKind: 'asc',
+          },
+          'newlines-between': 'never',
+        },
+      ],
       ...jsdocPlugin.configs['flat/recommended-typescript'].rules,
       'prefer-arrow/prefer-arrow-functions': [
         2,
