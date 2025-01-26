@@ -42,88 +42,12 @@ export const node = async (config: ConfigOptions): Promise<Linter.Config> => {
     files,
 
     plugins: {
-      node: nodePlugin,
+      n: nodePlugin,
     },
 
     rules: {
-      /**
-       * Require error handling in callbacks.
-       */
-      'node/handle-callback-err': ['error', 'error'],
-      /**
-       * Require correct usage of hashbang comments.
-       */
-      'node/hashbang': 'error',
-      /**
-       * Disallow deprecated APIs.
-       */
-      'node/no-deprecated-api': 'error',
-      /**
-       * Disallow the assignment to exports.
-       */
-      'node/no-exports-assign': 'error',
-      /**
-       * Disallow `require()` expressions which import extraneous modules.
-       */
-      'node/no-extraneous-require': 'error',
-      /**
-       * Disallow `new` operators with calls to `require`.
-       */
-      'node/no-new-require': 'error',
-      /**
-       * Disallow string concatenation with __dirname and __filename.
-       */
-      'node/no-path-concat': 'error',
-      /**
-       * Disallow `bin` files that npm ignores.
-       */
-      'node/no-unpublished-bin': 'error',
-      /**
-       * Disallow unsupported ECMAScript built-ins on the specified version.
-       */
-      'node/no-unsupported-features/es-builtins': 'error',
-      /**
-       * Enforce either `Buffer` or `require("buffer").Buffer`
-       */
-      'node/prefer-global/buffer': ['error', 'always'],
-      /**
-       * Enforce either `console` or `require("console")`.
-       */
-      'node/prefer-global/console': ['error', 'always'],
-      /**
-       * Enforce either `process` or `require("process")`.
-       */
-      'node/prefer-global/process': ['error', 'always'],
-      /**
-       * Enforce either `TextDecoder` or `require("util").TextDecoder`.
-       */
-      'node/prefer-global/text-decoder': ['error', 'always'],
-      /**
-       * Enforce either `TextEncoder` or `require("util").TextEncoder`.
-       */
-      'node/prefer-global/text-encoder': ['error', 'always'],
-      /**
-       * Enforce either `URL` or `require("url").URL`.
-       */
-      'node/prefer-global/url': ['error', 'always'],
-      /**
-       * Enforce either `URLSearchParams` or `require("url").URLSearchParams`.
-       */
-      'node/prefer-global/url-search-params': ['error', 'always'],
-      /**
-       * Enforce using the `node:` protocol when importing Node.js builtin
-       * modules.
-       */
-      'node/prefer-node-protocol': 'error',
-      /**
-       * Enforce `require("fs").promises`.
-       */
-      'node/prefer-promises/fs': 'error',
-      /**
-       * Require that `process.exit()` expressions use the same code path as
-       * throw.
-       */
-      'node/process-exit-as-throw': 'error',
+      ...nodePlugin.configs['recommended-module'].rules,
+      'n/no-missing-import': 0,
     },
   }
 }
