@@ -74,14 +74,14 @@ export default async ({
         '**/.tmp/**',
         '**/tmp/**',
       ],
-      name: 'azat-io/core/ignores',
+      name: 'lzear/core/ignores',
     },
     ...configs,
     ...(Array.isArray(customExtends)
       ? customExtends
       : [
           {
-            name: 'azat-io/custom-extends',
+            name: 'lzear/custom-extends',
             ...customExtends,
           },
         ]),

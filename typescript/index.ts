@@ -32,7 +32,7 @@ export let typescript = async (
   }
 
   return {
-    name: 'azat-io/typescript/rules',
+    name: 'lzear/typescript',
 
     files,
 

@@ -22,7 +22,7 @@ export default defineConfig({
       fileName: (format, entryName) =>
         `${entryName}${format === 'cjs' ? '.cjs' : '.mjs'}`,
       entry: path.resolve(import.meta.dirname, 'index.ts'),
-      name: '@azat-io/eslint-config',
+      name: '@lzear/eslint-config',
       formats: ['cjs', 'es'],
     },
     rollupOptions: {

@@ -51,7 +51,7 @@ export let vitest = async (config: ConfigOptions): Promise<Linter.Config> => {
   }
 
   return {
-    name: 'azat-io/vitest/rules',
+    name: 'lzear/vitest',
 
     files,
 

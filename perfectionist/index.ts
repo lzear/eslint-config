@@ -41,7 +41,7 @@ export let perfectionist = async (
   }
 
   return {
-    name: 'azat-io/perfectionist/rules',
+    name: 'lzear/perfectionist',
 
     files,
 

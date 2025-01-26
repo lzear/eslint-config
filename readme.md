@@ -1,6 +1,6 @@
 # ESLint Config
 
-[![Version](https://img.shields.io/npm/v/@azat-io/eslint-config.svg?color=4a32c3&labelColor=26272b)](https://npmjs.com/package/@azat-io/eslint-configt)
+[![Version](https://img.shields.io/npm/v/@lzear/eslint-config.svg?color=4a32c3&labelColor=26272b)](https://npmjs.com/package/@lzear/eslint-configt)
 [![GitHub License](https://img.shields.io/badge/license-MIT-232428.svg?color=4a32c3&labelColor=26272b)](https://github.com/azat-io/eslint-config/blob/main/license.md)
 
 My preferred ESLint configuration. Forked from [azat-io/eslint-config](https://github.com/azat-io/eslint-config), with some modifications including:
@@ -19,7 +19,7 @@ My preferred ESLint configuration. Forked from [azat-io/eslint-config](https://g
 2. Create ESLint configuration file `eslint.config.js`:
 
    ```js
-   import eslintConfig from '@azat-io/eslint-config'
+   import eslintConfig from '@lzear/eslint-config'
 
    export default eslintConfig({
      perfectionist: true,

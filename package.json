@@ -1,5 +1,5 @@
 {
-  "name": "@azat-io/eslint-config",
+  "name": "@lzear/eslint-config",
   "version": "2.11.1",
   "description": "ESLint shareable config",
   "keywords": [
@@ -11,9 +11,9 @@
     "javascript",
     "typescript"
   ],
-  "repository": "azat-io/eslint-config",
+  "repository": "lzear/eslint-config",
   "license": "MIT",
-  "author": "Azat S. <to@azat.io>",
+  "author": "lzear",
   "type": "module",
   "exports": {
     ".": {

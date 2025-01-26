@@ -40,7 +40,7 @@ export let core = (config: ConfigOptions): Linter.Config => {
   }
 
   return {
-    name: 'azat-io/core/rules',
+    name: 'lzear/core',
 
     files,
 
