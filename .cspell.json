@@ -17,6 +17,7 @@
     "fetchcontent",
     "getentrybyslug",
     "lookarounds",
+    "lzear",
     "nanostores",
     "nonconstructor",
     "nonoctal",
