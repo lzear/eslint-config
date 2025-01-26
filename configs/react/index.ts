@@ -20,13 +20,19 @@ export const react = async (config: ConfigOptions): Promise<Linter.Config> => {
     return {}
   }
 
-  const [reactCompilerPlugin, reactHooksPlugin, reactPerfPlugin, reactPlugin] =
-    await Promise.all([
-      interopDefault(import('eslint-plugin-react-compiler')),
-      interopDefault(import('eslint-plugin-react-hooks')),
-      interopDefault(import('eslint-plugin-react-perf')),
-      interopDefault(import('eslint-plugin-react')),
-    ] as const)
+  const [
+    reactCompilerPlugin,
+    reactHooksPlugin,
+    reactPerfPlugin,
+    reactPlugin,
+    nextPlugin,
+  ] = await Promise.all([
+    interopDefault(import('eslint-plugin-react-compiler')),
+    interopDefault(import('eslint-plugin-react-hooks')),
+    interopDefault(import('eslint-plugin-react-perf')),
+    interopDefault(import('eslint-plugin-react')),
+    interopDefault(import('@next/eslint-plugin-next')),
+  ] as const)
 
   const files = ['**/*.jsx']
 
@@ -40,6 +46,7 @@ export const react = async (config: ConfigOptions): Promise<Linter.Config> => {
     files,
 
     plugins: {
+      '@next/next': nextPlugin,
       react: reactPlugin,
       'react-compiler': reactCompilerPlugin,
       'react-hooks': reactHooksPlugin,
@@ -51,6 +58,8 @@ export const react = async (config: ConfigOptions): Promise<Linter.Config> => {
       ...reactHooksPlugin.configs.recommended.rules,
       ...reactPerfPlugin.configs.recommended.rules,
       ...reactPlugin.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
     },
 
     settings: {
