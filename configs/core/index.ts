@@ -1048,11 +1048,8 @@ export const core = (config: ConfigOptions): Linter.Config => {
        */
       'jsdoc/valid-types': 'error',
 
-      /**
-       * Require to use arrow functions.
-       */
       'prefer-arrow/prefer-arrow-functions': [
-        'error',
+        2,
         {
           classPropertiesAllowed: false,
           disallowPrototype: true,
