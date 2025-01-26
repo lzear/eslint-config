@@ -26,11 +26,7 @@ export const typescript = async (
     import('typescript-eslint'),
   )
 
-  const files = ['**/*.ts', '**/*.cts', '**/*.mts']
-
-  if (config.react) {
-    files.push('**/*.tsx')
-  }
+  const files = ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts']
 
   return tseslint.config({
     name: 'lzear/typescript',
@@ -46,20 +42,15 @@ export const typescript = async (
     languageOptions: {
       parser: typescriptParser as unknown as Linter.Parser,
       parserOptions: {
-        ecmaFeatures: {
-          jsx: config.react,
-        },
+        ecmaFeatures: { jsx: config.react },
         ecmaVersion: 'latest',
+        project: true,
         projectService: true,
         sourceType: 'module',
         tsconfigRootDir: process.cwd(),
       },
     },
 
-    settings: {
-      jsdoc: {
-        mode: 'typescript',
-      },
-    },
+    settings: { jsdoc: { mode: 'typescript' } },
   }) as Linter.Config[]
 }

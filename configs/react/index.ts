@@ -53,11 +53,20 @@ export const react = async (config: ConfigOptions): Promise<Linter.Config> => {
 
     rules: {
       'react-compiler/react-compiler': 2,
+
       ...reactHooksPlugin.configs.recommended.rules,
+
       ...reactPerfPlugin.configs.recommended.rules,
+      'react-perf/jsx-no-new-function-as-prop': 0,
+      'react-perf/jsx-no-new-object-as-prop': 0,
+
       ...reactPlugin.configs.recommended.rules,
+
       ...nextPlugin.configs.recommended.rules,
+
       ...nextPlugin.configs['core-web-vitals'].rules,
+
+      'react/react-in-jsx-scope': 0,
     },
 
     settings: {

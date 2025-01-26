@@ -5,6 +5,7 @@ import { node } from './configs/node'
 import { packageJson } from './configs/package-json'
 import { perfectionist } from './configs/perfectionist'
 import { react } from './configs/react'
+import { ignores } from './configs/src/files'
 import { typescript } from './configs/typescript'
 import { vitest } from './configs/vitest'
 
@@ -51,30 +52,7 @@ const configGenerator = async ({
   )
 
   return [
-    {
-      ignores: [
-        '**/.eslint-config-inspector/**',
-        '**/vite.config.*.timestamp-*',
-        '**/.vitepress/cache/**',
-        '**/node_modules/**',
-        '**/coverage/**',
-        '**/.history/**',
-        '**/.netlify/**',
-        '**/.vercel/**',
-        '**/.output/**',
-        '**/output/**',
-        '**/.cache/**',
-        '**/.temp/**',
-        '**/build/**',
-        '**/.nuxt/**',
-        '**/.next/**',
-        '**/dist/**',
-        '**/temp/**',
-        '**/.tmp/**',
-        '**/tmp/**',
-      ],
-      name: 'lzear/core/ignores',
-    },
+    { name: 'lzear/core/ignores', ignores },
     ...configs.flat(),
     ...(Array.isArray(customExtends)
       ? customExtends

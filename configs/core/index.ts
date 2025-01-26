@@ -20,22 +20,66 @@ import regexpPlugin from 'eslint-plugin-regexp'
 import sonarjsPlugin from 'eslint-plugin-sonarjs'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import globals from 'globals'
-import type { ConfigOptions } from '../..'
 
-export const core = (config: ConfigOptions): Linter.Config => {
-  const files = ['**/*.js', '**/*.cjs', '**/*.mjs']
+export const core = (): Linter.Config => {
+  const files = [
+    '**/*.js',
+    '**/*.cjs',
+    '**/*.mjs',
+    '**/*.ts',
+    '**/*.cts',
+    '**/*.mts',
+    '**/*.jsx',
+    '**/*.tsx',
+  ]
 
-  if (config.typescript) {
-    files.push('**/*.ts', '**/*.cts', '**/*.mts')
-  }
+  const rules = {
+    ...js.configs.recommended.rules,
 
-  if (config.react) {
-    files.push('**/*.jsx')
+    ...eslintCommentsPlugin.configs.recommended.rules,
+    '@eslint-community/eslint-comments/disable-enable-pair': 0,
+    '@eslint-community/eslint-comments/no-unlimited-disable': 0,
 
-    if (config.typescript) {
-      files.push('**/*.tsx')
-    }
-  }
+    ...importXPlugin.configs.recommended.rules,
+    'import-x/no-unresolved': 0,
+    'import-x/order': [
+      2,
+      {
+        alphabetize: { order: 'asc', orderImportKind: 'asc' },
+        'newlines-between': 'never',
+      },
+    ],
+
+    ...jsdocPlugin.configs['flat/recommended-typescript'].rules,
+    'jsdoc/require-jsdoc': 0,
+
+    'prefer-arrow/prefer-arrow-functions': [
+      2,
+      {
+        classPropertiesAllowed: false,
+        disallowPrototype: true,
+        singleReturnOnly: false,
+      },
+    ],
+
+    ...promisePlugin.configs.recommended.rules,
+
+    ...regexpPlugin.configs.recommended.rules,
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    ...(sonarjsPlugin.configs.recommended.rules as Linter.RulesRecord),
+    'sonarjs/fixme-tag': 0,
+    'sonarjs/pseudo-random': 0,
+    'sonarjs/todo-tag': 0,
+    'sonarjs/void-use': 0,
+
+    ...unicornPlugin.configs.recommended.rules,
+    'unicorn/no-abusive-eslint-disable': 0,
+    'unicorn/no-nested-ternary': 0, // conflicts with Prettier
+    'unicorn/no-null': 0,
+    'unicorn/number-literal-case': 0, // conflicts with Prettier, sadly
+    'unicorn/prevent-abbreviations': 0,
+  } satisfies Linter.RulesRecord
 
   return {
     name: 'lzear/core',
@@ -65,41 +109,8 @@ export const core = (config: ConfigOptions): Linter.Config => {
       unicorn: unicornPlugin,
     },
 
-    rules: {
-      ...js.configs.recommended.rules,
-      ...eslintCommentsPlugin.configs.recommended.rules,
-      ...importXPlugin.configs.recommended.rules,
-      'import-x/no-unresolved': 0,
-      'import-x/order': [
-        2,
-        {
-          alphabetize: {
-            order: 'asc',
-            orderImportKind: 'asc',
-          },
-          'newlines-between': 'never',
-        },
-      ],
-      ...jsdocPlugin.configs['flat/recommended-typescript'].rules,
-      'prefer-arrow/prefer-arrow-functions': [
-        2,
-        {
-          classPropertiesAllowed: false,
-          disallowPrototype: true,
-          singleReturnOnly: false,
-        },
-      ],
-      ...promisePlugin.configs.recommended.rules,
-      ...regexpPlugin.configs.recommended.rules,
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      ...(sonarjsPlugin.configs.recommended.rules as Linter.RulesRecord),
-      ...unicornPlugin.configs.recommended.rules,
-    },
+    rules: rules,
 
-    settings: {
-      jsdoc: {
-        mode: 'jsdoc',
-      },
-    },
+    settings: { jsdoc: { mode: 'jsdoc' } },
   }
 }
