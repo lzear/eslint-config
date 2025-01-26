@@ -1,8 +1,9 @@
 declare module '@eslint-community/eslint-plugin-eslint-comments' {
-  import type { ESLint } from 'eslint'
+  import type { ESLint, Linter } from 'eslint'
 
   let plugin: ESLint.Plugin
-  export = plugin
+  let configs: { recommended: { rules: Linter.RulesRecord } }
+  export = { ...plugin, configs }
 }
 
 declare module 'eslint-plugin-jsx-a11y' {

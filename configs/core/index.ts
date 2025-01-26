@@ -57,7 +57,7 @@ export const core = (config: ConfigOptions): Linter.Config => {
     },
 
     plugins: {
-      'eslint-comments': eslintCommentsPlugin,
+      '@eslint-community/eslint-comments': eslintCommentsPlugin,
       'import-x': importXPlugin as unknown as ESLint.Plugin,
       jsdoc: jsdocPlugin,
       'prefer-arrow': preferArrowPlugin,
@@ -776,32 +776,7 @@ export const core = (config: ConfigOptions): Linter.Config => {
        * Disallow "Yoda" conditions.
        */
       yoda: ['error', 'never'],
-
-      /**
-       * Require a `eslint-enable` comment for every `eslint-disable` comment.
-       */
-      'eslint-comments/disable-enable-pair': 'error',
-      /**
-       * Disallow a `eslint-enable` comment for multiple `eslint-disable` comments.
-       */
-      'eslint-comments/no-aggregating-enable': 'error',
-      /**
-       * Disallow duplicate `eslint-disable` comments.
-       */
-      'eslint-comments/no-duplicate-disable': 'error',
-      /**
-       * Disallow `eslint-disable` comments without rule names.
-       */
-      'eslint-comments/no-unlimited-disable': 'error',
-      /**
-       * Disallow unused `eslint-disable` comments.
-       */
-      'eslint-comments/no-unused-disable': 'error',
-      /**
-       * Disallow unused `eslint-enable` comments.
-       */
-      'eslint-comments/no-unused-enable': 'error',
-
+      ...eslintCommentsPlugin.configs.recommended.rules,
       /**
        * Require that type-only named specifiers be written only as part of
        * high-level type-only imports and never with an embedded marker.
