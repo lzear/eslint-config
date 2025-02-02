@@ -1,4 +1,4 @@
-name: test
+name: Test
 
 on:
   push:
@@ -7,24 +7,73 @@ on:
   pull_request:
 
 jobs:
-  test:
+  format:
+    name: Format
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: install node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: yarn
+      - name: Install Tools
+        uses: ./.github/actions/install-tools
 
-      - name: install dependencies
-        run: yarn install --frozen-lockfile
+      - name: Install Dependencies
+        uses: ./.github/actions/install-dependencies
 
-      - name: build
-        run: yarn build
+      - name: Test
+        run: pnpm test:format
 
-      - name: test
-        run: yarn test
+  js:
+    name: JS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Tools
+        uses: ./.github/actions/install-tools
+
+      - name: Install Dependencies
+        uses: ./.github/actions/install-dependencies
+
+      - name: Build Package
+        uses: ./.github/actions/build-package
+
+      - name: Test
+        run: pnpm test:js
+
+  spelling:
+    name: Spelling
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Tools
+        uses: ./.github/actions/install-tools
+
+      - name: Install Dependencies
+        uses: ./.github/actions/install-dependencies
+
+      - name: Test
+        run: pnpm test:spelling
+
+  types:
+    name: Types
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Tools
+        uses: ./.github/actions/install-tools
+
+      - name: Install Dependencies
+        uses: ./.github/actions/install-dependencies
+
+      - name: Test
+        run: pnpm test:types

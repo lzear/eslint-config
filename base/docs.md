@@ -1,1 +1,0 @@
-# @lzear/eslint-config
