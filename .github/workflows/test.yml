@@ -22,7 +22,7 @@ jobs:
         uses: ./.github/actions/install-dependencies
 
       - name: Test
-        run: pnpm test:format
+        run: yarn test:format
 
   js:
     name: JS
@@ -42,7 +42,7 @@ jobs:
         uses: ./.github/actions/build-package
 
       - name: Test
-        run: pnpm test:js
+        run: yarn test:js
 
   spelling:
     name: Spelling
@@ -59,7 +59,7 @@ jobs:
         uses: ./.github/actions/install-dependencies
 
       - name: Test
-        run: pnpm test:spelling
+        run: yarn test:spelling
 
   types:
     name: Types
@@ -76,4 +76,21 @@ jobs:
         uses: ./.github/actions/install-dependencies
 
       - name: Test
-        run: pnpm test:types
+        run: yarn test:types
+
+  unit:
+    name: Unit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Tools
+        uses: ./.github/actions/install-tools
+
+      - name: Install Dependencies
+        uses: ./.github/actions/install-dependencies
+
+      - name: Test
+        run: yarn test:unit

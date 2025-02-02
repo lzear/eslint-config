@@ -13,7 +13,7 @@ My preferred ESLint configuration. Forked from [azat-io/eslint-config](https://g
 1. Install package:
 
    ```sh
-   pnpm add --save-dev eslint @lzear/eslint-config
+   yarn add --D eslint @lzear/eslint-config
    ```
 
 2. Create ESLint configuration file `eslint.config.js`:

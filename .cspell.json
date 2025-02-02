@@ -6,7 +6,6 @@
     ".github",
     "changelog.md",
     "license",
-    "pnpm-lock.yaml",
     "tests/snapshots",
     "tsconfig.json"
   ],

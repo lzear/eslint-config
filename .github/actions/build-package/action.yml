@@ -5,4 +5,4 @@ runs:
   steps:
     - name: Build Package
       shell: bash
-      run: pnpm run build
+      run: yarn run build
