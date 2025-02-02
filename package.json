@@ -77,17 +77,17 @@
     "eslint-plugin-unicorn": "^56.0.1",
     "globals": "^15.14.0",
     "jsonc-eslint-parser": "^2.4.0",
-    "typescript-eslint": "^8.21.0"
+    "typescript-eslint": "^8.22.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@eslint/config-inspector": "^1.0.0",
-    "@types/node": "^22.10.10",
+    "@types/node": "^22.13.0",
     "changelogen": "^0.5.7",
     "changelogithub": "^13.12.1",
     "clean-publish": "^5.1.0",
-    "cspell": "^8.17.2",
+    "cspell": "^8.17.3",
     "eslint": "^9.19.0",
     "prettier": "^3.4.2",
     "simple-git-hooks": "^2.11.1",
