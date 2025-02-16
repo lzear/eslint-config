@@ -47,7 +47,7 @@
     "release:prepare:changelog": "prettier --write changelog.md",
     "release:prepare:package-json": "prettier --write package.json",
     "release:version": "changelogen --output changelog.md --release --no-commit --no-tag",
-    "test": "yarn test:format && yarn test:js && yarn test:spelling && yarn test:types && yarn test:unit",
+    "test": "yarn test:format && yarn test:js && yarn test:spelling && yarn test:types && yarn test:unit --run",
     "test:format": "prettier --check \"**/*.{js,ts,json,md,yml}\"",
     "test:js": "eslint .",
     "test:spelling": "cspell \"**/*\"",
