@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.0.1
+
+[compare changes](https://github.com/lzear/eslint-config/compare/v3.0.0...v3.0.1)
+
 ## v3.0.0
 
 [compare changes](https://github.com/lzear/eslint-config/compare/v2.1.0...v3.0.0)
