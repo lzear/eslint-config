@@ -1,5 +1,50 @@
 # Changelog
 
+## v2.14.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.13.0...v2.14.0)
+
+### 🚀 Features
+
+- **core:** Add de-morgan plugin ([b81f016](https://github.com/azat-io/eslint-config/commit/b81f016))
+- Update eslint plugins ([13dd777](https://github.com/azat-io/eslint-config/commit/13dd777))
+- **package-json:** Add require-keywords rule ([3aa843b](https://github.com/azat-io/eslint-config/commit/3aa843b))
+- **package-json:** Add require-name rule ([b398519](https://github.com/azat-io/eslint-config/commit/b398519))
+- **package-json:** Add require-version rule ([881ef1a](https://github.com/azat-io/eslint-config/commit/881ef1a))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
+## v2.13.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.12.0...v2.13.0)
+
+### 🚀 Features
+
+- Update eslint plugins ([44741b8](https://github.com/azat-io/eslint-config/commit/44741b8))
+- **package-json:** Add require-author rule ([5bdbc8c](https://github.com/azat-io/eslint-config/commit/5bdbc8c))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
+## v2.12.0
+
+[compare changes](https://github.com/azat-io/eslint-config/compare/v2.11.1...v2.12.0)
+
+### 🚀 Features
+
+- **typescript:** Add prefer-namespace-keyword rule ([5b784dc](https://github.com/azat-io/eslint-config/commit/5b784dc))
+- **svelte:** Remove html-self-closing rule ([80d1479](https://github.com/azat-io/eslint-config/commit/80d1479))
+- **vue:** Remove html-self-closing rule ([f70558e](https://github.com/azat-io/eslint-config/commit/f70558e))
+- Update eslint plugins ([60063f4](https://github.com/azat-io/eslint-config/commit/60063f4))
+- **package-json:** Add no-empty-fields rule ([276e440](https://github.com/azat-io/eslint-config/commit/276e440))
+
+### ❤️ Contributors
+
+- Azat S. ([@azat-io](http://github.com/azat-io))
+
 ## v2.11.1
 
 [compare changes](https://github.com/azat-io/eslint-config/compare/v2.11.0...v2.11.1)
