@@ -12,6 +12,7 @@
 import js from '@eslint/js'
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
 import type { ESLint, Linter } from 'eslint'
+import deMorganPlugin from 'eslint-plugin-de-morgan'
 import importXPlugin from 'eslint-plugin-import-x'
 import jsdocPlugin from 'eslint-plugin-jsdoc'
 import preferArrowPlugin from 'eslint-plugin-prefer-arrow'
@@ -39,6 +40,8 @@ export const core = (): Linter.Config => {
     ...eslintCommentsPlugin.configs.recommended.rules,
     '@eslint-community/eslint-comments/disable-enable-pair': 0,
     '@eslint-community/eslint-comments/no-unlimited-disable': 0,
+
+    ...deMorganPlugin.configs.recommended.rules,
 
     ...importXPlugin.configs.recommended.rules,
     'import-x/no-unresolved': 0,
@@ -100,6 +103,7 @@ export const core = (): Linter.Config => {
 
     plugins: {
       '@eslint-community/eslint-comments': eslintCommentsPlugin,
+      'de-morgan': deMorganPlugin,
       'import-x': importXPlugin as unknown as ESLint.Plugin,
       jsdoc: jsdocPlugin,
       'prefer-arrow': preferArrowPlugin,
