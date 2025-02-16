@@ -65,7 +65,6 @@ export const core = (): Linter.Config => {
 
     ...regexpPlugin.configs.recommended.rules,
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     ...(sonarjsPlugin.configs.recommended.rules as Linter.RulesRecord),
     'sonarjs/fixme-tag': 0,
     'sonarjs/pseudo-random': 0,

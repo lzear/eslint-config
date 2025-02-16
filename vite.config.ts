@@ -42,6 +42,7 @@ export default defineConfig({
     }),
     removeCommentsPlugin(),
   ],
+  // @ts-expect-error - idk
   test: {
     globals: true,
   },
