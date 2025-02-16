@@ -14,7 +14,6 @@ import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comment
 import type { ESLint, Linter } from 'eslint'
 import deMorganPlugin from 'eslint-plugin-de-morgan'
 import importXPlugin from 'eslint-plugin-import-x'
-import jsdocPlugin from 'eslint-plugin-jsdoc'
 import preferArrowPlugin from 'eslint-plugin-prefer-arrow'
 import promisePlugin from 'eslint-plugin-promise'
 import regexpPlugin from 'eslint-plugin-regexp'
@@ -52,9 +51,6 @@ export const core = (): Linter.Config => {
         'newlines-between': 'never',
       },
     ],
-
-    ...jsdocPlugin.configs['flat/recommended-typescript'].rules,
-    'jsdoc/require-jsdoc': 0,
 
     'prefer-arrow/prefer-arrow-functions': [
       2,
@@ -105,7 +101,6 @@ export const core = (): Linter.Config => {
       '@eslint-community/eslint-comments': eslintCommentsPlugin,
       'de-morgan': deMorganPlugin,
       'import-x': importXPlugin as unknown as ESLint.Plugin,
-      jsdoc: jsdocPlugin,
       'prefer-arrow': preferArrowPlugin,
       promise: promisePlugin,
       regexp: regexpPlugin,
@@ -114,7 +109,5 @@ export const core = (): Linter.Config => {
     },
 
     rules: rules,
-
-    settings: { jsdoc: { mode: 'jsdoc' } },
   }
 }

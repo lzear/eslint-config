@@ -50,7 +50,5 @@ export const typescript = async (
         tsconfigRootDir: process.cwd(),
       },
     },
-
-    settings: { jsdoc: { mode: 'typescript' } },
   }) as Linter.Config[]
 }
